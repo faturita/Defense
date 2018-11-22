@@ -1,0 +1,128 @@
+\documentclass{beamer}
+ 
+\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+
+\newsavebox{\authbox}
+\sbox{\authbox}{%
+\centering
+\begin{minipage}{0.33\linewidth}
+\centering\normalsize
+Candidate \par
+Rodrigo Ramele
+\end{minipage}
+\hfill
+\begin{minipage}{0.33\linewidth}
+\centering\normalsize
+Supervisor \par
+Dr. Juan Miguel Santos
+\end{minipage}
+
+\begin{minipage}{0.33\linewidth}
+\centering\normalsize
+Cosupervisor \par
+Dra. Ana Julia Villar
+\end{minipage}
+}
+ 
+%Information to be included in the title page:
+\title[HIST of EEG for BCI] %optional
+{Histogram of Gradient Orientations of EEG Signal Plots for Brain Computer Interfaces}
+ 
+\subtitle{Thesis}
+ 
+\author[Ramele, Rodrigo]{ % (optional, for multiple authors)
+\usebox{\authbox}
+}
+ 
+\institute[ITBA] % (optional)
+{
+  Doctorado en Ingeniería en Informática\\
+  Instituto Tecnológico de Buenos Aires
+}
+ 
+\date[Nov 29, 2018] % (optional)
+{Noviembre 29 2018}
+ 
+\logo{\includegraphics[height=1.0cm]{images/itbalogo.png}}
+ 
+ 
+ 
+\begin{document}
+ 
+\frame{\titlepage}
+ 
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in first frame. This is a text in first frame. This is a text in first frame.
+\end{frame}
+ 
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame} 
+
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in second frame. 
+For the sake of showing an example.
+ 
+\begin{itemize}
+ \item<1-> Text visible on slide 1
+ \item<2-> Text visible on slide 2
+ \item<3> Text visible on slide 3
+ \item<4-> Text visible on slide 4
+\end{itemize}
+ 
+\end{frame}
+
+\begin{frame}
+\frametitle{Sample frame title}
+\begin{equation}
+ \omega_\mathrm{ang}(\alpha) = \sum_{r=-1}^{1} \omega \bigg ( \frac{8\alpha}{2\pi} + 8r \bigg )
+\label{eq:wang}
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sample frame title}
+ 
+In this slide, some important text will be
+\alert{highlighted} beause it's important.
+Please, don't abuse it.
+ 
+\begin{block}{Remark}
+Sample text
+\end{block}
+ 
+\begin{alertblock}{Important theorem}
+Sample text in red box
+\end{alertblock}
+ 
+\begin{examples}
+Sample text in green box. "Examples" is fixed as block title.
+\end{examples}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Alpha Waves wiggles}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Mu a Greek letter}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The P300 Wave}
+
+
+\end{frame}
+
+\end{document}
