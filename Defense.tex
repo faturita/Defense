@@ -57,10 +57,11 @@
       
     
 %\renewcommand{\figurename}{Fig.}  
-
 \usepackage[figurename=]{caption}
 
 \newcommand\Fontvi{\fontsize{13}{13.2}\selectfont}
+
+\renewcommand{\contentsname}{\centering Contents}
 
 \newsavebox{\authbox}
 \sbox{\authbox}{%
@@ -146,8 +147,16 @@ Instituto Tecnológico de Buenos Aires
 \begin{frame}
 \frametitle{Brain Computer Interfaces}
 \begin{center}
-
-Fotos de exito de BCI
+ 
+\begin{figure}[]
+\centering
+\includegraphics[height=4cm,width=7cm]{images/Cybathlon.png}
+\includegraphics[height=4cm,width=7cm]{images/Jane.jpg}\\
+\includegraphics[height=4cm,width=7cm]{images/gTecEEGSubject.png}
+\includegraphics[height=4cm,width=7cm]{images/DoC.jpg}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
 
 \end{center}
 \end{frame}
@@ -207,18 +216,29 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
                 \item BCI challenging technology.
                 \item Outstanding advances but yet its push into mainstream technology has not fully materialized.
                 \item More clinical and physician Involvement: devise mechanisms to help them stay in the loop.
+                \item (+) speed, SNR, reliability, portability, usability.
+                \item (-)  biocompatibilities, setup, training time, calibration time, subject inter/intra variability.
+                \item The search for practical, relevant, and invariant features that convey good-enough information~\cite{Perdikis2014}.
+                \item Ethical aspects should be revised~\cite{Yuste2017}.
             \end{itemize}
         \end{center}
     \end{frame}
-    
+
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[scale=0.5]{images/BCIParadigms.png}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}    
     
     \section{Motivation}
     \begin{frame}
         \frametitle{Motivation}
         \begin{center}
             \begin{itemize}
-                \item Is it possible to discriminate EEG signals and their corresponding cognitive processes based on their plots? 
-                \item Are those visual wiggles simple noise or can we extract something meaningful from them ?
+                \item This thesis tries to unravel the following question: is it possible to analyze and discriminate electroencephalographic signals by automatic processing the shape of the waveforms using the Histogram of Gradient Orientations ?
             \end{itemize}
         \end{center}
     \end{frame}
@@ -226,9 +246,13 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
         \frametitle{What we aim to do}
         \begin{center}
             \begin{itemize}
-                \item Establish a Fruitful connection between Image Processing and EEG Analysis
-                \item Provide a Framework to analyze visually relevant features from EEG.
-                \item Assess the method by performing Binary Classification on known datasets.
+\begin{itemize}
+\item A procedure to construct analyzable 2D-images based on one-dimensional signals.
+\item An enhancement over the Histogram of Gradient Orientation technique to allow non-squared patches and to adapt it to signal plots.
+\item A mapping procedure to link EEG time-series characteristics to features of 2D-images.
+\item A feature extraction method for EEG signals that can be used objectively to encode a representation of the waveform.
+\item A classification algorithm that use the encoded representation with the purpose of comparing and identifying waveforms for BCI applications.
+\end{itemize}
             \end{itemize}
         \end{center}
     \end{frame}
@@ -243,6 +267,7 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
  \item<3-> Matching Pursuit
  \item<4-> MIDS
  \item<5-> Local Binary Patterns
+ \item<6-> Peak Picking/aEEG/PAA
 \end{itemize}
 \end{center}
 \end{frame}
@@ -280,15 +305,18 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[height=2cm,width=7cm]{images/samplepoints.eps}
-\includegraphics[height=2cm,width=7cm]{images/bresenham.eps}
-\includegraphics[height=2cm,width=7cm]{images/upscaled.eps}
-\includegraphics[height=2cm,width=7cm]{images/upsample.eps}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[height=2cm,width=7cm]{images/samplepoints.eps}}
+\fbox{\includegraphics[height=2cm,width=7cm]{images/bresenham.eps}}\\
+\fbox{\includegraphics[height=2cm,width=7cm]{images/upscaled.eps}}
+\fbox{\includegraphics[height=2cm,width=7cm]{images/upsample.eps}}
 \caption[Signal Plotting: Interpolation]{Generated images based on different interpolation schemes.}
 \label{fig:interpolation}
 \end{figure}
 \end{center}
 \end{frame}
+
 
 
 \begin{frame}
@@ -360,7 +388,7 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 
    
 
-\section{Materials And Methods}
+\section{Experimental Validation}
 \begin{frame}
 \frametitle{BCI Paradigms}
 \begin{center}
@@ -722,15 +750,12 @@ Sample text in green box. "Examples" is fixed as block title.
 \end{examples}
 \end{frame}
 
-  \section{Method}
-   \section{Offline Results}
     \begin{frame}
         \begin{center}
             \LARGE Method   
         \end{center}
     \end{frame}
     
-    \subsection{Signal Transformation}
     \begin{frame}
         \frametitle{Signal Transformation}
         \begin{center}           
@@ -800,7 +825,6 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
      %   \end{center}
     %\end{frame}
     
-    \subsection{Feature Extraction}
     \begin{frame}
     \frametitle{Features: SIFT\footfullcite{Lowe 2004} Descriptors}
     
@@ -897,7 +921,6 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
      
      
     
-    \subsection{Classification}
     \begin{frame}
         \frametitle{Classification}
         \begin{center}
@@ -952,14 +975,12 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
     \end{frame}    
     
     
-    \section{Offline Results}
     \begin{frame}
         \begin{center}
             \LARGE Offline Results   
         \end{center}
     \end{frame}
     
-    \subsection{Inter-Subject Occipital Alpha Waves}
     \begin{frame}
         \frametitle{Dataset I: Subject Independent $\alpha $ Waves \footfullcite{Ramele, Villar, Santos 2014}}        
    \begin{figure}[thpb]
@@ -973,7 +994,6 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
     \end{frame}
     
     
-    \subsection{Physiobank EEG Dataset, Runs 1 and 2}
     \begin{frame}
       \frametitle{Dataset II: EEG Dataset, Runs 1 and 2 \footfullcite{Goldberg et al 2000, Schalk 2004}}
    \begin{figure}[thpb]
@@ -1011,7 +1031,6 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
     %\end{frame}
     
     
-    \subsection{Motor Imagery (BNCI Horizon 2020 Dataset 002-2014)} 	
 	\begin{frame}
 	  \frametitle{Dataset III: Motor Imagery \footfullcite{Steyrl, Scherer et al 2015}}
        \includegraphics[scale=0.38]{images/DatasetIIIDiagram2}    
@@ -1072,5 +1091,105 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \label{fig:volconduction}
 \end{figure}
 \end{frame}
+
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[height=4cm,width=7cm]{images/emotivsubject.jpg}
+\includegraphics[height=4cm,width=7cm]{images/gTecsubject.jpg}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[height=4cm,width=7cm]{images/hype.png}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}
+
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[height=4cm,width=7cm]{images/Cic.png}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}  
+
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[height=4cm,width=7cm]{images/Convocatoria.png}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}  
+
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[height=4cm,width=7cm]{images/Papers.png}
+\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}  
+
+\begin{frame}  
+\begin{table}[h!]
+\caption{EEG waveforms descriptions found in the surveyed literature.}
+\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g.,  \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{cc}
+\toprule
+\textbf{Method}	& \textbf{Phenomena} 	\\
+\midrule
+Positive Rounded Component                    & $\alpha$-Waves, Epilepsy  \\
+Rising and Falling Phase      & Epilepsy  \\
+Terminal plateau      & Epilepsy  \\
+Ripples and Wiggles     & Epilepsy, ERP  \\
+Sinusoidal Shape        & Epilepsy  \\
+Sawtooth                     & Motor Imagery, Sleep  \\
+Sharpness or Spike-like     & Epilepsy  \\
+Rectangular     & Epilepsy  \\
+Line length       & Anomaly Detection\\
+Root Mean Square & Anomaly Detection \\
+Wicket Shape     & Epilepsy \\
+Peak and Trough Sharpness Ratio     & Epilepsy \\
+Symmetry between rise and decay phase     & Epilepsy  \\
+Slope Ratio    & Sleep  \\
+\bottomrule
+\end{tabular}
+\label{tab:methods}
+\end{table}
+\end{frame}  
+
+\begin{frame}  
+\begin{table}[h!]
+\caption{EEG waveforms descriptions found in the surveyed literature.}
+\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g.,  \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{cc}
+\toprule
+\textbf{Method}	& \textbf{Phenomena} 	\\
+\midrule
+Positive/Negative Peak Amplitude & ERP  \\
+Positive vs Negative Ratio    & Sleep K-Complex \\
+Base-to-Peak Amplitude     & ERP  \\
+Peak-to-Peak Amplitude     & ERP  \\
+Positive/Negative Peak Latency                                 & ERP    \\
+Integrated Activity               & ERP, Epilepsy,ICU  \\
+Cross-Correlation                & ERP, Epilepsy, Sleep  \\
+Coupling \\ Cross Frequency,  Phase-Amplitude, Phase-Phase     & Sleep \\
+Period Amplitude Analysis  & ERP, Epilepsy \\
+\bottomrule
+\end{tabular}
+\label{tab:methods}
+\end{table}
+\end{frame}  
 
 \end{document}
