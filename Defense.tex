@@ -16,6 +16,9 @@
 \usepackage{transparent}
 \usepackage{longtable,booktabs}
 
+\usepackage{chronology}
+\usepackage{epigraph}
+
 \usepackage{caption} 
 \captionsetup[table]{skip=5pt}
 
@@ -131,10 +134,12 @@ Instituto Tecnológico de Buenos Aires
 \end{frame}
 
 
-    \begin{frame}
-        \frametitle{Outline}
-        \tableofcontents{}
-    \end{frame}
+\begin{frame}
+\begin{center}
+\frametitle{Outline}
+\tableofcontents{}
+\end{center}
+\end{frame}
     
     
 \section{Introduction}
@@ -142,7 +147,35 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Brain Computer Interfaces}
 \begin{center}
 
-Fotos de los exitos de BCI
+Fotos de exito de BCI
+
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Brain Computer Interfaces}
+\begin{center}
+
+\begin{chronology}[5]{1966}{2014}{90ex}[\textwidth]
+\event{1966}{Kamiya, Neurofeedback for $\alpha$ waves}
+\event{1969}{Fetz, Operand Conditioning}
+\event{1973}{Vidal, first use of BCI word}
+\event{1987}{Donchin \textbf{P300}}
+\event{1989}{Hiraiwa, Bereitschaftspotentials}
+\event{1991}{Wolpaw $\mu$ \textbf{Wadsworth BCI}}
+\event{1993}{Pfurtscheller SMR \textbf{Graz BCI}}
+\event{1995}{Jane Huggins invasive BrainGate}
+\event{1997}{Anderson, Mental Tasks}
+\event{1999}{Birmahuer SCP}
+\event{2001}{Nicolelis, invasive BCI on primates}
+\event{2003}{Middendorf, SSVEP}
+\event{2006}{Millan, ErrP}
+\event{2008}{Blankertz, adaptive \textbf{Berlin BCI}}
+\event{2010}{Schalk, ECoG BCI}
+\event{2012}{Zander, Passive BCI \textbf{pBCI}}
+%\event{\decimaldate{25}{12}{2001}}{three}
+\label{fig:story}
+\end{chronology}
 
 \end{center}
 \end{frame}
@@ -200,6 +233,21 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
         \end{center}
     \end{frame}
     
+    
+\begin{frame}
+\frametitle{Electroencephalography}
+\begin{center}
+\begin{itemize}
+ \item<1-> Permutation Entropy
+ \item<2-> SHCC
+ \item<3-> Matching Pursuit
+ \item<4-> MIDS
+ \item<5-> Local Binary Patterns
+\end{itemize}
+\end{center}
+\end{frame}
+
+
 \section{The Histogram of Gradient Orientations}    
 \begin{frame}
 \frametitle{The Histogram of Gradient Orientations}
@@ -1004,6 +1052,25 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
       \label{figure3}
    \end{figure}  
     \end{frame}
+    
+\begin{frame}    
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.4]{images/neuralplanes.png}
+\includegraphics[scale=0.4]{images/neuroanatomy.png}
+\caption[Neuroanatomical structures of the brain]{Neuronal Planes regularly used in neuroscience research.  In BCI they are used to understand electrode location and spatial filters.}
+\label{fig:neuroanatomy}
+\end{figure}
+\end{frame}
 
+\begin{frame}    
+\begin{figure}[]
+\centering
+\includegraphics[height=6cm,width=1\textwidth]{images/volconduction1.png}
+\includegraphics[height=6cm,width=1\textwidth]{images/volconduction2.png}
+\caption[EEG Volume Conduction]{A source signal with positive/negative polarity is generated in a very specific region of the brain but due to volume conduction their influence affects a widespread area of the scalp where sensors are located (Image of the brain from Swartz Center for Computational Neuroscience).}
+\label{fig:volconduction}
+\end{figure}
+\end{frame}
 
 \end{document}
