@@ -19,6 +19,8 @@
 \usepackage{chronology}
 \usepackage{epigraph}
 
+\usepackage{subfig}
+
 \usepackage{caption} 
 \captionsetup[table]{skip=5pt}
 
@@ -60,6 +62,7 @@
 \usepackage[figurename=]{caption}
 
 \newcommand\Fontvi{\fontsize{13}{13.2}\selectfont}
+\newcommand\Fontre{\fontsize{16}{16.2}\selectfont}
 
 \renewcommand{\contentsname}{\centering Contents}
 
@@ -143,74 +146,75 @@ Instituto Tecnológico de Buenos Aires
 \end{frame}
     
     
+%\section{Introduction}
+%\begin{frame}
+%\frametitle{Brain Computer Interfaces}
+%\begin{center}
+%\begin{figure}[]
+%\centering
+%\only<1>{\subfloat[Fig. 1]{\includegraphics[height=3.8cm,width=7cm]{images/Cybathlon.png}}}
+%\only<1>{\subfloat[Fig. 1]{\includegraphics[height=3.8cm,width=7cm]{images/Jane.jpg}}}\\
+%\only<1>{\subfloat[Fig. 1]{\includegraphics[height=3.8cm,width=7cm]{images/gTecEEGSubject.png}}}
+%\only<1>{\subfloat[Fig. 1]{\includegraphics[height=3.8cm,width=7cm]{images/DoC.jpg}}}
+%\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+%\label{fig:digitalelectroencephalograph}
+%\end{figure}
+%\end{center}
+%\end{frame}
+
+
 \section{Introduction}
 \begin{frame}
-\frametitle{Brain Computer Interfaces}
+\frametitle{Brain Computer Interfaces - Current trends}
 \begin{center}
 \begin{figure}[]
 \centering
-\includegraphics[height=3.8cm,width=7cm]{images/Cybathlon.png}
-\includegraphics[height=3.8cm,width=7cm]{images/Jane.jpg}\\
-\includegraphics[height=3.8cm,width=7cm]{images/gTecEEGSubject.png}
-\includegraphics[height=3.8cm,width=7cm]{images/DoC.jpg}
-\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
+\includegraphics[height=3.5cm,width=7cm]{images/Jane.jpg}
+\includegraphics[height=3.5cm,width=7cm]{images/gTecEEGSubject.png}\\
+\includegraphics[height=3.5cm,width=7cm]{images/Cybathlon.png}
+\includegraphics[height=3.5cm,width=7cm]{images/DoC.jpg}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
 \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Brain Computer Interfaces}
+\frametitle{Brain Computer Interfaces - System Components}
 \begin{center}
 \begin{figure}[]
 \centering
 \includegraphics[scale=0.4]{images/bcichart.png}
+\label{fig:bciblockdiagram}
+\end{figure}
+\end{center}
+\end{frame}
+
+% Enfatizar que los paradigmas leen los estados mentales.
+\begin{frame}
+\frametitle{Brain Computer Interfaces - BCI Paradigms}
+\begin{center}
+\begin{figure}[]
+\centering
+\includegraphics[scale=0.5]{images/bcichart.png}
 \caption[BCI Block Diagram]{General components of a BCI system.}
 \label{fig:bciblockdiagram}
 \end{figure}
 \end{center}
 \end{frame}
 
-\begin{frame}
-\frametitle{Brain Computer Interfaces - Chronology}
-\begin{center}
-
-\begin{chronology}[5]{1966}{2014}{90ex}[\textwidth]
-\event{1966}{Kamiya, Neurofeedback for $\alpha$ waves}
-\event{1969}{Fetz, Operand Conditioning}
-\event{1973}{Vidal, first use of BCI word}
-\event{1987}{Donchin \textbf{P300}}
-\event{1989}{Hiraiwa, Bereitschaftspotentials}
-\event{1991}{Wolpaw $\mu$ \textbf{Wadsworth BCI}}
-\event{1993}{Pfurtscheller SMR \textbf{Graz BCI}}
-\event{1995}{Jane Huggins invasive BrainGate}
-\event{1997}{Anderson, Mental Tasks}
-\event{1999}{Birmahuer SCP}
-\event{2001}{Nicolelis, invasive BCI on primates}
-\event{2003}{Middendorf, SSVEP}
-\event{2006}{Millan, ErrP}
-\event{2008}{Blankertz, adaptive \textbf{Berlin BCI}}
-\event{2010}{Schalk, ECoG BCI}
-\event{2012}{Zander, Passive BCI \textbf{pBCI}}
-%\event{\decimaldate{25}{12}{2001}}{three}
-\label{fig:story}
-\end{chronology}
-\end{center}
-\end{frame}
 
 \begin{frame}   
-\frametitle{Brain Computer Interfaces}
+\frametitle{Brain Computer Interfaces - BCI Paradigms}
 \begin{figure}[]
 \centering
 \includegraphics[scale=0.5]{images/BCIParadigms.png}
-\caption[Wearable portable Digital Electroencephalograph]{BCI Paradigms}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
 \end{frame}   
     
 
     \begin{frame}
-        \frametitle{Introduction}
+        \frametitle{NOOOOOOOOOOOOOOOOO Introduction}
         \begin{center}
             \begin{itemize}
                 \item BCI challenging technology.
@@ -228,25 +232,21 @@ Instituto Tecnológico de Buenos Aires
     \begin{frame}
         \frametitle{Motivation}
         \begin{center}
-            \begin{itemize}
-                \item This thesis tries to unravel the following question: is it possible to analyze and discriminate electroencephalographic signals by automatic processing the shape of the waveforms using the Histogram of Gradient Orientations ?
-            \end{itemize}
+                \LARGE Is it possible to analyze and discriminate electroencephalographic signals by automatic processing the shape of the waveforms using the \\ Histogram of Gradient Orientations ?
         \end{center}
     \end{frame}
     \begin{frame}
-        \frametitle{What we aim to do}
-        \begin{center}
-            \begin{itemize}
-\begin{itemize}
-\item A procedure to construct analyzable 2D-images based on one-dimensional signals.
-\item An enhancement over the Histogram of Gradient Orientation technique to allow non-squared patches and to adapt it to signal plots.
-\item A mapping procedure to link EEG time-series characteristics to features of 2D-images.
-\item A feature extraction method for EEG signals that can be used objectively to encode a representation of the waveform.
-\item A classification algorithm that use the encoded representation with the purpose of comparing and identifying waveforms for BCI applications.
-\end{itemize}
-            \end{itemize}
-        \end{center}
-    \end{frame}
+    
+\frametitle{What we aim to do}
+\begin{center}
+\begin{enumerate}
+\item<1-> \Fontre Construct analyzable 2D-images.
+\item<2-> \Fontre Adaptation to the SIFT method to EEG time-series
+\item<3-> \Fontre Feature extraction procedure
+\item<4-> \Fontre Classification algorithm
+\end{enumerate}
+\end{center}
+\end{frame}
     
 \begin{frame}
 \frametitle{Electroencephalography}
@@ -254,20 +254,20 @@ Instituto Tecnológico de Buenos Aires
 \begin{figure}[]
 \centering
 \includegraphics[height=6.0cm,width=14cm]{images/sampleeeg.eps}
-\caption[Sample Multichannel EEG signal]{Sample EEG signal obtained from (g.Nautilus, g.Tec, Austria). Time axis is in seconds and five seconds are displayed.  The eight channels provided by this device are shown.}
+\caption{Sample 8-channel EEG signal obtained from (g.Nautilus, g.Tec, Austria). Voltage in $\mu V$ vs time in seconds. Five seconds are displayed.}
 \label{fig:sampleeeg}
 \end{figure}
 \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Electroencephalography}
+\frametitle{Waveform-Based Algorithms}
 \begin{center}
 \begin{itemize}
  \item<1-> Permutation Entropy
- \item<2-> SHCC
+ \item<2-> Slope Horizontal Chain Code
  \item<3-> Matching Pursuit
- \item<4-> MIDS
+ \item<4-> Merge of Increasing and Decreasing Sequences (REFs!)
  \item<5-> Local Binary Patterns
  \item<6-> Peak Picking/aEEG/PAA
 \end{itemize}
@@ -279,12 +279,11 @@ Instituto Tecnológico de Buenos Aires
 \begin{frame}
 \frametitle{The Histogram of Gradient Orientations}
 \begin{center}
-\LARGE The Histogram of Gradient Orientation
+\LARGE Proposal \\ The Histogram of Gradient Orientation
 \end{center}
 \end{frame}
 
 
-\section{The Histogram of Gradient Orientations}    
 \begin{frame}
 \frametitle{The Histogram of Gradient Orientations}
 \begin{center}
@@ -299,12 +298,38 @@ Instituto Tecnológico de Buenos Aires
 \end{frame}
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{NOOO The Histogram of Gradient Orientations}
+\begin{center}
+\begin{enumerate}
+ \item<1-> Signal Preprocessing
+ \item<2-> Signal Segmentation
+ \item<3-> Signal Plotting
+ \item<4-> Keypoint Localization
+ \item<5-> Calculation of the Histogram of Gradient Orientation
+\end{enumerate}
+\end{center}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{The Histogram of Gradient Orientations}
+%\begin{center}
+%\begin{equation}
+%\mathcal{I}^{(c)}(z_1,z_2) = \left\{ \begin{array}{rl}
+%255 & \text{if} \   z_1 = \gamma_{t} \  n \quad \text{and}  \quad z_2 = \left\lfloor \gamma \; \tilde{x}(n,c) \right\rceil + z(c) \\
+%0   & \mbox{otherwise}
+%\end{array}\right.
+%\label{eq:images}
+%\end{equation}
+%\noindent  where  $1 \leq c \leq C$ and $1 \leq n \leq N$. The amplitude scale factor $\gls{gamma}$ and time scale factor $\gls{gammat}$ are used to determine the image size and at the same time the image resolution. This scheme produces a black-and-white plot of the signal with $255$ being white and $0$ black.  There is one image per channel per segment. 
+%\end{center}
+%\end{frame}
+
+\begin{frame}
+\frametitle{Image Coordinate System}
 \begin{center}
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.9]{images/imagecoordinatesystem.pdf}
-\caption[Image Coordinate System]{The image coordinate system and the mapping from the signal segment.  The origin is the $(0,0)$ position at the upper-left corner of the image.  Time is represented as sample points on the horizontal axis, and the amplitude in $\mu V$ is shown on the vertical axis. Image height $H_y$ and width $W_x$ are obtained based on signal parameters.  The signal's zero-level $z(c)$ is the vertical location where the signal zero value is located. The plot of the signal is obtained by first setting the sample points on the predetermined image locations according to equation \ref{eq:images} and then applying a discrete interpolation algorithm to connect them with straight lines. The plotted waveform is a K-Complex.}
 \label{fig:imagecoordinatesystem}
 \end{figure}
 \end{center}
@@ -330,17 +355,17 @@ Instituto Tecnológico de Buenos Aires
 
 
 
-\begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
-\begin{center}
-\begin{figure}[htb]
-\centering
-\includegraphics[height=5cm,width=5cm]{images/plotvsimage.eps}
-\includegraphics[height=5cm,width=10cm]{images/sampleplot.eps}
-\label{fig:plotvsimage}
-\end{figure}
-\end{center}
-\end{frame}
+%\begin{frame}
+%\frametitle{The Histogram of Gradient Orientations}
+%\begin{center}
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[height=5cm,width=5cm]{images/plotvsimage.eps}
+%\includegraphics[height=5cm,width=10cm]{images/sampleplot.eps}
+%\label{fig:plotvsimage}
+%\end{figure}
+%\end{center}
+%\end{frame}
 
 \begin{frame}
 \frametitle{The Histogram of Gradient Orientations}
@@ -360,7 +385,7 @@ Instituto Tecnológico de Buenos Aires
 \end{frame}
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{Histogram Calculation}
 \begin{center}
 Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes of each block $B_{i,j}$,  the orientations are accumulated in a  $3$-dimensional histogram $h$ through the following equation: 
  
@@ -370,17 +395,17 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \label{eq:histogram}
 \end{equation}
 
+
 \noindent  where $\mathbf{p}$ is a pixel from within the patch,  $\theta$ is the angle bin with $ \theta \in \{0, 45, 90, 135, 180, 225, 270, 315\} $,  $ \left\lVert J(\mathbf{p}) \right\rVert $ is the norm of the gradient vector in the pixel $\mathbf{p}$, computed using finite differences, and $\angle J(\mathbf{p}) $ is the angle of the gradient vector.  The scalar $ \omega_\mathrm{ang}(\cdot) $  and vector $ \omega_{ij}(\cdot) $ functions are linear interpolations used by~\footfullcite{Lowe2004} and \footfullcite{Vedaldi2010} to provide a weighting contribution to eight adjacent bins. 
 \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{Descriptor}
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.8]{images/gradientorientations.pdf}
-\caption[Gradient Orientations Numbering]{A scheme of the orientation's histogram computation. The first eight orientations of the first block $ B_{1,1} $, are labeled from $1$ to $8$ clockwise. The orientation of the second block $ B_{1,2} $ is labeled from $9$ to $16$.  This labeling continues left-to-right, up-down until the eight orientations for all the sixteen blocks are assigned. They form the corresponding descriptor of $128$ coordinates.  The length of each arrow represent the value of the histogram on each direction for each block.}
+\includegraphics[scale=0.9]{images/gradientorientations.pdf}
 \label{fig:orientationsfull}
 \end{figure}
 \end{center}
@@ -388,12 +413,11 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{Patch Geometry}
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=10cm]{images/patchgeometry.pdf}
-\caption[Patch Geometry]{The scale of local patch is selected in order to capture the whole waveform, which can be scaled in the time $\gls{gammat}$ and amplitude $\gls{gamma}$ direction.  This determines appropriate horizontal $\gls{St}$ and vertical $\gls{Sv}$ patch scales.  The size of the patch is $\gls{Sx} \times \gls{Sy}$ pixels. The vertical size consists of $4$ blocks of size $\gls{Sy}$ pixels which should be high enough as to contain the signal $\gls{DeltamuV}$, the peak-to-peak amplitude of the signal component. The horizontal size includes $4$ blocks, up to $\gls{Sx}$ pixels, and should cover the entire duration in seconds of the signal waveform, $\gls{lambda}$.   }
+\includegraphics[scale=0.9]{images/patchgeometry.pdf}
 \label{fig:patchgeometry}
 \end{figure}
 \end{center}
@@ -410,18 +434,24 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{frame}
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{Classification Algorithm}
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.4]{images/ClassificationFull.pdf}
-\caption[NBNN Classification]{Classification Algorithm: \textbf{Step 1} Two Dictionaries are created from templates descriptors obtained in a calibration session for two different classes, labeled $1$ and $2$. On the other hand, a set of query descriptors are extracted from a new image that needs to be categorized. \textbf{Step 2} Distances from every descriptor $q_i$ are calculated against the closest one from the dictionary of class 1.  Distances summations are accumulated. \textbf{Step 3} Distance values from every descriptor $q_i$ are calculated against the closest one from the dictionary of class 2, the other class.  Distances summations are accumulated. \textbf{Step 4 }The two summation values for each class label are compared against each other. The summation that achieved the lesser value is the one that more closely resembles the set of templates, thus is the one predicted by the classification algorithm.}
+\includegraphics[height=8cm,width=1\textwidth]{images/ClassificationFull.pdf}
 \label{fig:nbnnclassification}
 \end{figure}
 \end{center}
 \end{frame}   
 
 \section{Experimental Validation}
+\begin{frame}
+\frametitle{Experimental Validation}
+\begin{center}
+\LARGE Experimental Validation
+\end{center}
+\end{frame}
+
 \begin{frame}
 \frametitle{Experimental Validation}
 \begin{center}
@@ -440,6 +470,15 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{center}
 \end{frame}
 
+\begin{frame}   
+\begin{figure}[]
+\centering
+\includegraphics[height=6cm,width=6cm]{images/emotivsubject.jpg}
+\includegraphics[height=6cm,width=8cm]{images/eeglab2.jpg}
+\caption[Wearable portable Digital Electroencephalograph]{EPOC Emotiv and Alpha Waves signals}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}
 
 \begin{frame}
 \frametitle{Alpha Waves wiggles}
@@ -1022,7 +1061,32 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
         \end{center}
     \end{frame}      
      
-     
+\begin{frame}
+\frametitle{Brain Computer Interfaces - Chronology}
+\begin{center}
+
+\begin{chronology}[5]{1966}{2014}{90ex}[\textwidth]
+\event{1966}{Kamiya, Neurofeedback for $\alpha$ waves}
+\event{1969}{Fetz, Operand Conditioning}
+\event{1973}{Vidal, first use of BCI word}
+\event{1987}{Donchin \textbf{P300}}
+\event{1989}{Hiraiwa, Bereitschaftspotentials}
+\event{1991}{Wolpaw $\mu$ \textbf{Wadsworth BCI}}
+\event{1993}{Pfurtscheller SMR \textbf{Graz BCI}}
+\event{1995}{Jane Huggins invasive BrainGate}
+\event{1997}{Anderson, Mental Tasks}
+\event{1999}{Birmahuer SCP}
+\event{2001}{Nicolelis, invasive BCI on primates}
+\event{2003}{Middendorf, SSVEP}
+\event{2006}{Millan, ErrP}
+\event{2008}{Blankertz, adaptive \textbf{Berlin BCI}}
+\event{2010}{Schalk, ECoG BCI}
+\event{2012}{Zander, Passive BCI \textbf{pBCI}}
+%\event{\decimaldate{25}{12}{2001}}{three}
+\label{fig:story}
+\end{chronology}
+\end{center}
+\end{frame}     
     
     \begin{frame}
         \frametitle{Classification}
