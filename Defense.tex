@@ -147,22 +147,32 @@ Instituto Tecnológico de Buenos Aires
 \begin{frame}
 \frametitle{Brain Computer Interfaces}
 \begin{center}
- 
 \begin{figure}[]
 \centering
-\includegraphics[height=4cm,width=7cm]{images/Cybathlon.png}
-\includegraphics[height=4cm,width=7cm]{images/Jane.jpg}\\
-\includegraphics[height=4cm,width=7cm]{images/gTecEEGSubject.png}
-\includegraphics[height=4cm,width=7cm]{images/DoC.jpg}
+\includegraphics[height=3.8cm,width=7cm]{images/Cybathlon.png}
+\includegraphics[height=3.8cm,width=7cm]{images/Jane.jpg}\\
+\includegraphics[height=3.8cm,width=7cm]{images/gTecEEGSubject.png}
+\includegraphics[height=3.8cm,width=7cm]{images/DoC.jpg}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
-
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Brain Computer Interfaces}
+\begin{center}
+\begin{figure}[]
+\centering
+\includegraphics[scale=0.4]{images/bcichart.png}
+\caption[BCI Block Diagram]{General components of a BCI system.}
+\label{fig:bciblockdiagram}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Brain Computer Interfaces - Chronology}
 \begin{center}
 
 \begin{chronology}[5]{1966}{2014}{90ex}[\textwidth]
@@ -185,29 +195,19 @@ Instituto Tecnológico de Buenos Aires
 %\event{\decimaldate{25}{12}{2001}}{three}
 \label{fig:story}
 \end{chronology}
-
 \end{center}
 \end{frame}
-    
-\begin{frame}
+
+\begin{frame}   
 \frametitle{Brain Computer Interfaces}
-\begin{center}
 \begin{figure}[]
 \centering
-\includegraphics[scale=0.4]{images/bcichart.png}
-\caption[BCI Block Diagram]{General components of a BCI system.}
-\label{fig:bciblockdiagram}
+\includegraphics[scale=0.5]{images/BCIParadigms.png}
+\caption[Wearable portable Digital Electroencephalograph]{BCI Paradigms}
+\label{fig:digitalelectroencephalograph}
 \end{figure}
-\end{center}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Brain Computer Interfaces}
-\begin{center}
-Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También podría agregar una tabla con las velocidades alcanzadas.
-\end{center}
-\end{frame}
+\end{frame}   
+    
 
     \begin{frame}
         \frametitle{Introduction}
@@ -216,22 +216,13 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
                 \item BCI challenging technology.
                 \item Outstanding advances but yet its push into mainstream technology has not fully materialized.
                 \item More clinical and physician Involvement: devise mechanisms to help them stay in the loop.
-                \item (+) speed, SNR, reliability, portability, usability.
+                \item (+) ITR, SNR, reliability, portability, usability.
                 \item (-)  biocompatibilities, setup, training time, calibration time, subject inter/intra variability.
-                \item The search for practical, relevant, and invariant features that convey good-enough information~\cite{Perdikis2014}.
-                \item Ethical aspects should be revised~\cite{Yuste2017}.
+                \item The search for practical, relevant, and invariant features that convey good-enough information~\footfullcite{Perdikis2014}.
+                \item Ethical aspects should be revised~\footfullcite{Yuste2017}.
             \end{itemize}
         \end{center}
-    \end{frame}
-
-\begin{frame}   
-\begin{figure}[]
-\centering
-\includegraphics[scale=0.5]{images/BCIParadigms.png}
-\caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
-\label{fig:digitalelectroencephalograph}
-\end{figure}
-\end{frame}    
+    \end{frame} 
     
     \section{Motivation}
     \begin{frame}
@@ -257,7 +248,18 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
         \end{center}
     \end{frame}
     
-    
+\begin{frame}
+\frametitle{Electroencephalography}
+\begin{center}
+\begin{figure}[]
+\centering
+\includegraphics[height=6.0cm,width=14cm]{images/sampleeeg.eps}
+\caption[Sample Multichannel EEG signal]{Sample EEG signal obtained from (g.Nautilus, g.Tec, Austria). Time axis is in seconds and five seconds are displayed.  The eight channels provided by this device are shown.}
+\label{fig:sampleeeg}
+\end{figure}
+\end{center}
+\end{frame}
+
 \begin{frame}
 \frametitle{Electroencephalography}
 \begin{center}
@@ -277,13 +279,22 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
 \begin{frame}
 \frametitle{The Histogram of Gradient Orientations}
 \begin{center}
-\begin{itemize}
+\LARGE The Histogram of Gradient Orientation
+\end{center}
+\end{frame}
+
+
+\section{The Histogram of Gradient Orientations}    
+\begin{frame}
+\frametitle{The Histogram of Gradient Orientations}
+\begin{center}
+\begin{enumerate}
  \item<1-> Signal Preprocessing
  \item<2-> Signal Segmentation
  \item<3-> Signal Plotting
  \item<4-> Keypoint Localization
  \item<5-> Calculation of the Histogram of Gradient Orientation
-\end{itemize}
+\end{enumerate}
 \end{center}
 \end{frame}
 
@@ -292,7 +303,7 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=1.0]{images/imagecoordinatesystem.pdf}
+\includegraphics[scale=0.9]{images/imagecoordinatesystem.pdf}
 \caption[Image Coordinate System]{The image coordinate system and the mapping from the signal segment.  The origin is the $(0,0)$ position at the upper-left corner of the image.  Time is represented as sample points on the horizontal axis, and the amplitude in $\mu V$ is shown on the vertical axis. Image height $H_y$ and width $W_x$ are obtained based on signal parameters.  The signal's zero-level $z(c)$ is the vertical location where the signal zero value is located. The plot of the signal is obtained by first setting the sample points on the predetermined image locations according to equation \ref{eq:images} and then applying a discrete interpolation algorithm to connect them with straight lines. The plotted waveform is a K-Complex.}
 \label{fig:imagecoordinatesystem}
 \end{figure}
@@ -336,10 +347,12 @@ Mapa de BCI con los diferentes paradigmas y las diferentes soluciones.  También
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=7cm, height=6cm]{images/signalpatchkeypoint.png}
-\includegraphics[width=7cm, height=6.1cm]{images/gradientsdescriptors.png}
-\includegraphics[width=7cm, height=6cm]{images/samplegradients.png}
-\includegraphics[width=7cm, height=6cm]{images/histogramchart.eps}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=7cm, height=2.5cm]{images/signalpatchkeypoint.png}}
+\fbox{\includegraphics[width=7cm, height=2.5cm]{images/gradientsdescriptors.png}}\\
+\fbox{\includegraphics[width=7cm, height=2.5cm]{images/samplegradients.png}}
+\fbox{\includegraphics[width=7cm, height=2.5cm]{images/histogramchart.eps}}
 \caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}.
 \label{fig:sampledescriptor}
 \end{figure}
@@ -357,7 +370,7 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \label{eq:histogram}
 \end{equation}
 
-\noindent  where $\mathbf{p}$ is a pixel from within the patch,  $\theta$ is the angle bin with $ \theta \in \{0, 45, 90, 135, 180, 225, 270, 315\} $,  $ \left\lVert J(\mathbf{p}) \right\rVert $ is the norm of the gradient vector in the pixel $\mathbf{p}$, computed using finite differences, and $\angle J(\mathbf{p}) $ is the angle of the gradient vector.  The scalar $ \omega_\mathrm{ang}(\cdot) $  and vector $ \omega_{ij}(\cdot) $ functions are linear interpolations used by~\cite{Lowe2004} and \cite{Vedaldi2010} to provide a weighting contribution to eight adjacent bins. 
+\noindent  where $\mathbf{p}$ is a pixel from within the patch,  $\theta$ is the angle bin with $ \theta \in \{0, 45, 90, 135, 180, 225, 270, 315\} $,  $ \left\lVert J(\mathbf{p}) \right\rVert $ is the norm of the gradient vector in the pixel $\mathbf{p}$, computed using finite differences, and $\angle J(\mathbf{p}) $ is the angle of the gradient vector.  The scalar $ \omega_\mathrm{ang}(\cdot) $  and vector $ \omega_{ij}(\cdot) $ functions are linear interpolations used by~\footfullcite{Lowe2004} and \footfullcite{Vedaldi2010} to provide a weighting contribution to eight adjacent bins. 
 \end{center}
 \end{frame}
 
@@ -366,7 +379,7 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=16cm]{images/gradientorientations.pdf}
+\includegraphics[scale=0.8]{images/gradientorientations.pdf}
 \caption[Gradient Orientations Numbering]{A scheme of the orientation's histogram computation. The first eight orientations of the first block $ B_{1,1} $, are labeled from $1$ to $8$ clockwise. The orientation of the second block $ B_{1,2} $ is labeled from $9$ to $16$.  This labeling continues left-to-right, up-down until the eight orientations for all the sixteen blocks are assigned. They form the corresponding descriptor of $128$ coordinates.  The length of each arrow represent the value of the histogram on each direction for each block.}
 \label{fig:orientationsfull}
 \end{figure}
@@ -386,11 +399,31 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{center}
 \end{frame}
 
-   
+\begin{frame}
+\frametitle{The Histogram of Gradient Orientations}
+\begin{center}
+\begin{equation}
+\hat{L} = \arg \min_{L} \sum_{i=1}^{Q} \sum_{h=1}^{\gls{k}} {\left\lVert \mathbf{q}_{i}^{(bpc)} -  \mathbf{d}_{h}^{(bpc)} \right\rVert}  ^{2} 
+\label{eq:classification}
+\end{equation}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Histogram of Gradient Orientations}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{images/ClassificationFull.pdf}
+\caption[NBNN Classification]{Classification Algorithm: \textbf{Step 1} Two Dictionaries are created from templates descriptors obtained in a calibration session for two different classes, labeled $1$ and $2$. On the other hand, a set of query descriptors are extracted from a new image that needs to be categorized. \textbf{Step 2} Distances from every descriptor $q_i$ are calculated against the closest one from the dictionary of class 1.  Distances summations are accumulated. \textbf{Step 3} Distance values from every descriptor $q_i$ are calculated against the closest one from the dictionary of class 2, the other class.  Distances summations are accumulated. \textbf{Step 4 }The two summation values for each class label are compared against each other. The summation that achieved the lesser value is the one that more closely resembles the set of templates, thus is the one predicted by the classification algorithm.}
+\label{fig:nbnnclassification}
+\end{figure}
+\end{center}
+\end{frame}   
 
 \section{Experimental Validation}
 \begin{frame}
-\frametitle{BCI Paradigms}
+\frametitle{Experimental Validation}
 \begin{center}
 \begin{itemize}
  \item<1-> Alpha Waves Wiggles
@@ -400,7 +433,14 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{center}
 \end{frame}     
 
-\subsection{Alpha Waves wiggles}
+\begin{frame}
+\frametitle{Alpha Waves wiggles}
+\begin{center}
+\LARGE Alpha Waves wiggles
+\end{center}
+\end{frame}
+
+
 \begin{frame}
 \frametitle{Alpha Waves wiggles}
 \begin{figure}[h!]
@@ -427,23 +467,61 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{figure}
 \end{frame}
 
-
-
-
-
-\subsection{Mu Letter}
 \begin{frame}
 \frametitle{Mu a Greek letter}
-
-
+\begin{center}
+\LARGE Mu a Greek letter
+\end{center}
 \end{frame}
 
-\subsection{The P300 Wave}
+\begin{frame}
+\frametitle{Mu a Greek letter}
+\begin{figure}[thpb]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\includegraphics[scale=0.38]{images/DatasetIIIDiagram2}    
+\caption{\centering Dataset III: Motor Imagery \footfullcite{Steyrl, Scherer et al 2015}}
+\end{figure} 	
+\end{frame}	
+
+   \begin{frame}   
+   \frametitle{Mu a Greek letter}
+   \begin{figure}[thpb]
+      \centering
+      \setlength\fboxsep{0pt}
+	  \setlength\fboxrule{0.5pt}
+       \fbox{\includegraphics[scale=0.45]{images/DatasetMIBCISimulation1}}
+      \caption{\centering Accuracy for the BCI Simulation classifying Baseline vs. RH (Right Hand) motor imagery.}
+      \label{figure3}
+   \end{figure} 	
+	\end{frame}	  
+	
+	
+	\begin{frame}
+	\frametitle{Mu a Greek letter}
+   \begin{figure}[thpb]
+      \centering
+      \setlength\fboxsep{0pt}
+	  \setlength\fboxrule{0.5pt}
+       \fbox{\includegraphics[scale=0.45]{images/DatasetMIBCISimulation2}}
+      \caption{\centering Accuracy for the BCI Simulation classifying Baseline vs. FM (Feet Movement) motor imagery.}
+      \label{figure3}
+   \end{figure} 	
+	\end{frame}	  
+	    
+\begin{frame}
+\frametitle{Mu a Greek letter}
+\begin{center}
+\LARGE The P300 Wave
+\end{center}
+\end{frame}
+
 \begin{frame}
 \frametitle{The P300 Wave}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=15cm]{images/openvibep300matrix.png}
+\includegraphics[scale=0.3]{images/openvibep300matrix.png}
 \caption[P300 Speller Matrix]{Example of the $6 \times 6$ Speller Matrix from the OpenVibe software.  Rows and columns flash in random permutations.}
 \label{fig:p300matrix}
 \end{figure}
@@ -455,7 +533,7 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \begin{center}
 \begin{figure}[htb]
 \centering
-\includegraphics[width=15cm]{images/classificationgraph.pdf}
+\includegraphics[scale=0.3]{images/classificationgraph.pdf}
 \caption[P300 Speller Matrix Letter Identification]{For each column and row, an averaged, standardized and scaled signal $\tilde{x}^l(n,c)$ is obtained from the segments $S_i^l$  corresponding to the $\gls{ka}$ intensification sequences with $ 1 \leq i \leq k_a $ and location $l$ varying between $1$ and $12$. From the averaged signal, the image $I^{(l,c)}$ of the signal plot is generated and each descriptor is computed.  By comparing each descriptor $\mathbf{q}$  against the set of templates, the P300 ERP can be detected, and finally the desired letter from the matrix can be inferred.}
 \label{fig:classification}
 \end{figure}
@@ -645,7 +723,7 @@ HIST method has an improved performance at letter identification than SVM that p
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=15cm]{images/subject.png}\label{subject8}
+\includegraphics[height=7cm,width=1\textwidth]{images/subject.png}\label{subject8}
 \caption[Sample P300 Patches]{Ten sample P300 template patches for Subjects 8 (A) and 3 (B) of the public Dataset I of ALS patients.}  %Downward deflection is positive polarity. 
 \label{fig:p300templates}
 \end{figure}
@@ -674,6 +752,14 @@ Additionally, the stability of the P300 component waveform has been extensively 
             \end{itemize}
         \end{center}
     \end{frame}    
+
+
+\begin{frame}
+\frametitle{Conclusion}
+\begin{center}
+\LARGE Conclusion
+\end{center}
+\end{frame}
     
 \begin{frame}
 \frametitle{Conclusion}
@@ -681,7 +767,7 @@ Additionally, the stability of the P300 component waveform has been extensively 
 \begin{itemize}
 \item EEG Waveforms can be analyzed by this method.
 \item Oscillatory processes can be studied by this methodology.
-\item The stability of ERP transient components can be studied objetively with the proposed methology.
+\item The stability of ERP transient components can be studied objectively with the proposed methodology.
 \end{itemize}
 \end{center}
 \end{frame}    
@@ -721,6 +807,23 @@ For the sake of showing an example.
 \end{itemize}
  
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Sample frame title}
+\begin{itemize}
+\item Notch filter:
+\item Band-pass filter
+\item Decimation or Downsizing:
+\item Segmentation
+\item Baseline Removal
+\item Artifact Rejection
+\item Spatial Filter
+\end{itemize}
+An excellent review can be found here~\cite{Simons2016}.
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Sample frame title}
@@ -1085,8 +1188,8 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}    
 \begin{figure}[]
 \centering
-\includegraphics[height=6cm,width=1\textwidth]{images/volconduction1.png}
-\includegraphics[height=6cm,width=1\textwidth]{images/volconduction2.png}
+\includegraphics[height=4cm,width=1\textwidth]{images/volconduction1.png}
+\includegraphics[height=4cm,width=1\textwidth]{images/volconduction2.png}
 \caption[EEG Volume Conduction]{A source signal with positive/negative polarity is generated in a very specific region of the brain but due to volume conduction their influence affects a widespread area of the scalp where sensors are located (Image of the brain from Swartz Center for Computational Neuroscience).}
 \label{fig:volconduction}
 \end{figure}
@@ -1106,7 +1209,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}   
 \begin{figure}[]
 \centering
-\includegraphics[height=4cm,width=7cm]{images/hype.png}
+\includegraphics[height=9cm,width=1\textwidth]{images/hype.png}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
@@ -1115,7 +1218,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}   
 \begin{figure}[]
 \centering
-\includegraphics[height=4cm,width=7cm]{images/Cic.png}
+\includegraphics[height=9cm,width=1\textwidth]{images/Cic.png}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
@@ -1124,7 +1227,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}   
 \begin{figure}[]
 \centering
-\includegraphics[height=4cm,width=7cm]{images/Convocatoria.png}
+\includegraphics[height=9cm,width=1\textwidth]{images/Convocatoria.png}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
@@ -1133,7 +1236,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}   
 \begin{figure}[]
 \centering
-\includegraphics[height=4cm,width=7cm]{images/Papers.png}
+\includegraphics[height=9cm,width=1\textwidth]{images/Papers.png}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
