@@ -77,7 +77,7 @@ Dr. Juan Miguel Santos
 \begin{minipage}{0.33\linewidth}
 \centering\normalsize
 Candidate \par
-Rodrigo Ramele
+\underline{Ing. Rodrigo Ramele}
 \end{minipage}
 \hfill
 \begin{minipage}{0.33\linewidth}
@@ -100,10 +100,10 @@ Dra. Ana Julia Villar
 \institute[ITBA] % (optional)
 {
 \begin{columns}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.4\textwidth}
 \hfill \includegraphics[scale=.20]{images/itbalogo.png}
 \end{column}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.6\textwidth}
 \Fontvi
 Doctorado en Ingeniería en Informática\\
 Instituto Tecnológico de Buenos Aires
@@ -178,6 +178,7 @@ Instituto Tecnológico de Buenos Aires
 \end{center}
 \end{frame}
 
+% Enfatizar que los paradigmas leen los estados mentales
 \begin{frame}
 \frametitle{Brain Computer Interfaces - System Components}
 \begin{center}
@@ -188,20 +189,6 @@ Instituto Tecnológico de Buenos Aires
 \end{figure}
 \end{center}
 \end{frame}
-
-% Enfatizar que los paradigmas leen los estados mentales.
-\begin{frame}
-\frametitle{Brain Computer Interfaces - BCI Paradigms}
-\begin{center}
-\begin{figure}[]
-\centering
-\includegraphics[scale=0.5]{images/bcichart.png}
-\caption[BCI Block Diagram]{General components of a BCI system.}
-\label{fig:bciblockdiagram}
-\end{figure}
-\end{center}
-\end{frame}
-
 
 \begin{frame}   
 \frametitle{Brain Computer Interfaces - BCI Paradigms}
@@ -214,16 +201,11 @@ Instituto Tecnológico de Buenos Aires
     
 
     \begin{frame}
-        \frametitle{NOOOOOOOOOOOOOOOOO Introduction}
+        \frametitle{Brain Computer Interfaces - Problem Statement}
         \begin{center}
             \begin{itemize}
-                \item BCI challenging technology.
-                \item Outstanding advances but yet its push into mainstream technology has not fully materialized.
-                \item More clinical and physician Involvement: devise mechanisms to help them stay in the loop.
-                \item (+) ITR, SNR, reliability, portability, usability.
-                \item (-)  biocompatibilities, setup, training time, calibration time, subject inter/intra variability.
-                \item The search for practical, relevant, and invariant features that convey good-enough information~\footfullcite{Perdikis2014}.
-                \item Ethical aspects should be revised~\footfullcite{Yuste2017}.
+                \item<1-> Clinical and Physician involvement~\footfullcite{Yuste2017}
+                \item<2-> Practical, relevant, and invariant features that convey good-enough information~\footfullcite{Perdikis2014}.
             \end{itemize}
         \end{center}
     \end{frame} 
@@ -264,12 +246,11 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Waveform-Based Algorithms}
 \begin{center}
 \begin{itemize}
- \item<1-> Permutation Entropy
- \item<2-> Slope Horizontal Chain Code
- \item<3-> Matching Pursuit
- \item<4-> Merge of Increasing and Decreasing Sequences (REFs!)
- \item<5-> Local Binary Patterns
- \item<6-> Peak Picking/aEEG/PAA
+ \item<1-> Peak Picking/aEEG/PAA
+ \item<2-> Merge of Increasing and Decreasing Sequences
+ \item<3-> Permutation Entropy 
+ \item<4-> Matching Pursuit
+ \item<5-> Slope Horizontal Chain Code
 \end{itemize}
 \end{center}
 \end{frame}
@@ -285,20 +266,7 @@ Instituto Tecnológico de Buenos Aires
 
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
-\begin{center}
-\begin{enumerate}
- \item<1-> Signal Preprocessing
- \item<2-> Signal Segmentation
- \item<3-> Signal Plotting
- \item<4-> Keypoint Localization
- \item<5-> Calculation of the Histogram of Gradient Orientation
-\end{enumerate}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{NOOO The Histogram of Gradient Orientations}
+\frametitle{The Histogram of Gradient Orientations - Feature Extraction Algorithm}
 \begin{center}
 \begin{enumerate}
  \item<1-> Signal Preprocessing
@@ -329,7 +297,7 @@ Instituto Tecnológico de Buenos Aires
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.9]{images/imagecoordinatesystem.pdf}
+\includegraphics[scale=0.9]{images/imagecoordinatesystemresume.pdf}
 \label{fig:imagecoordinatesystem}
 \end{figure}
 \end{center}
@@ -337,7 +305,7 @@ Instituto Tecnológico de Buenos Aires
 
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{Signal Plotting}
 \begin{center}
 \begin{figure}[h!]
 \centering
@@ -347,7 +315,7 @@ Instituto Tecnológico de Buenos Aires
 \fbox{\includegraphics[height=2cm,width=7cm]{images/bresenham.eps}}\\
 \fbox{\includegraphics[height=2cm,width=7cm]{images/upscaled.eps}}
 \fbox{\includegraphics[height=2cm,width=7cm]{images/upsample.eps}}
-\caption[Signal Plotting: Interpolation]{Generated images based on different interpolation schemes.}
+\caption{Generated images based on different interpolation schemes.}
 \label{fig:interpolation}
 \end{figure}
 \end{center}
@@ -378,7 +346,64 @@ Instituto Tecnológico de Buenos Aires
 \fbox{\includegraphics[width=7cm, height=2.5cm]{images/gradientsdescriptors.png}}\\
 \fbox{\includegraphics[width=7cm, height=2.5cm]{images/samplegradients.png}}
 \fbox{\includegraphics[width=7cm, height=2.5cm]{images/histogramchart.eps}}
-\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}.
+\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
+\label{fig:sampledescriptor}
+\end{figure}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Keypoint Localization}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=14cm,height=6cm]{images/signalpatchkeypoint.png}}
+\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
+\label{fig:sampledescriptor}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pixel Gradient Vector Field}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=14cm,height=6cm]{images/gradientsdescriptors.png}}
+\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
+\label{fig:sampledescriptor}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pixel Gradient Vector Field}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=14cm,height=6cm]{images/samplegradients.png}}
+\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
+\label{fig:sampledescriptor}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Orientation histogram}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=10cm,height=6cm ]{images/histogramchart.eps}}
+\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
 \label{fig:sampledescriptor}
 \end{figure}
 \end{center}
@@ -387,16 +412,22 @@ Instituto Tecnológico de Buenos Aires
 \begin{frame}
 \frametitle{Histogram Calculation}
 \begin{center}
-Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes of each block $B_{i,j}$,  the orientations are accumulated in a  $3$-dimensional histogram $h$ through the following equation: 
- 
 
 \begin{equation}
  h(\theta,i,j) = \sum_{\mathbf{p}} \omega_\mathrm{ang}(\angle J(\mathbf{p}) - \theta)\, \omega_{ij}\left(\mathbf{p} - \mathbf{kp} \right)\, \left\lVert J(\mathbf{p})\right\rVert 
 \label{eq:histogram}
 \end{equation}
 
+\begin{itemize}
+\item $\theta$ is the angle bin with $ \theta \in \{0, 45, 90, 135, 180, 225, 270, 315\} $.
+\item $ i,j = \{0,1,2,3\} $ indexes of the 16 grid blocks.
+\item $\mathbf{kp}$ is the keypoint center location.
+\item $\mathbf{p}$ is a pixel from within the patch, centered around $\mathbf{kp}$.
+\item $\angle J(\mathbf{p}) $ is the angle of the gradient vector.
+\item $ \left\lVert J(\mathbf{p}) \right\rVert $ is the norm of the gradient vector in the pixel $\mathbf{p}$.
+\item $\omega_\mathrm{ang}(\cdot) $ scalar and $ \omega_{ij}(\cdot) $ vector linear interpolation functions~\footfullcite{Lowe2004,Vedaldi2010}.
+\end{itemize}
 
-\noindent  where $\mathbf{p}$ is a pixel from within the patch,  $\theta$ is the angle bin with $ \theta \in \{0, 45, 90, 135, 180, 225, 270, 315\} $,  $ \left\lVert J(\mathbf{p}) \right\rVert $ is the norm of the gradient vector in the pixel $\mathbf{p}$, computed using finite differences, and $\angle J(\mathbf{p}) $ is the angle of the gradient vector.  The scalar $ \omega_\mathrm{ang}(\cdot) $  and vector $ \omega_{ij}(\cdot) $ functions are linear interpolations used by~\footfullcite{Lowe2004} and \footfullcite{Vedaldi2010} to provide a weighting contribution to eight adjacent bins. 
 \end{center}
 \end{frame}
 
@@ -424,12 +455,22 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{frame}
 
 \begin{frame}
-\frametitle{The Histogram of Gradient Orientations}
+\frametitle{Proposed Classification Method}
 \begin{center}
 \begin{equation}
-\hat{L} = \arg \min_{L} \sum_{i=1}^{Q} \sum_{h=1}^{\gls{k}} {\left\lVert \mathbf{q}_{i}^{(bpc)} -  \mathbf{d}_{h}^{(bpc)} \right\rVert}  ^{2} 
+\hat{L} = \arg \min_{L} \sum_{i=1}^{Q} \sum_{h=1}^{\gls{k}} {\left\lVert \mathbf{q}_{i}^{(bpc)} -  \mathbf{d}_{h}^{(L,bpc)} \right\rVert}  ^{2} 
 \label{eq:classification}
 \end{equation}
+\begin{itemize}
+\item $L$ class label.
+\item $Q$ number of descriptors extracted from the query image. 
+\item $\mathbf{q}_{i}^{(bpc)} $ query descriptors.
+\item $\mathbf{d}_{h}^{(L,bpc)} $ neighbors descriptors from template dictionary of class $L$.
+\item $\mathbf{d}_{h}^{(L,bpc)} \in N_T(  \mathbf{q}_{i}^{(bpc)} )$.
+\item $N_T(  \mathbf{q}_{i}^{(bpc)} ) = \{ \mathbf{d}_{h}^{(bpc)} \in T_{L}^{bpc} / \mathbf{d} $ is the $\gls{k}$-nearest neighbor of $  \mathbf{q}_{i}^{(bpc)} \}$.
+\item $\hat{L}$ predicted class label.
+\item $\gls{k}$ the number of neighbors to pick from the template~\footfullcite{Boiman2008}.
+\end{itemize}
 \end{center}
 \end{frame}
 
@@ -438,7 +479,7 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[height=8cm,width=1\textwidth]{images/ClassificationFull.pdf}
+\includegraphics[height=7.5cm,width=13cm]{images/ClassificationFull.pdf}
 \label{fig:nbnnclassification}
 \end{figure}
 \end{center}
@@ -457,28 +498,60 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \begin{center}
 \begin{itemize}
  \item<1-> Alpha Waves Wiggles
- \item<2-> Mu Greek Letter
- \item<3-> The P300 Wave
+ \item<2-> $\mu$ Rhythm
+ \item<3-> The P300 Waveform
 \end{itemize}
 \end{center}
 \end{frame}     
 
 \begin{frame}
-\frametitle{Alpha Waves wiggles}
+\frametitle{Experimental Validation}
 \begin{center}
 \LARGE Alpha Waves wiggles
 \end{center}
 \end{frame}
 
+\begin{frame}
+\frametitle{Alpha Waves Datasets}
+\begin{center}
+\begin{itemize}
+\item Dataset I: 128 Hz, 14 channels, 10 subjects, 10 class 1 vs 10 class 2.
+\item Dataset II: 160 Hz, 64 channes, 25 subjects, Run 1 vs Run 2, 60 vs 60.
+\end{itemize}
+\end{center}
+\end{frame}
+
 \begin{frame}   
+\frametitle{EEG Consumer Grade Digital Device and EEG Signals}
 \begin{figure}[]
 \centering
-\includegraphics[height=6cm,width=6cm]{images/emotivsubject.jpg}
-\includegraphics[height=6cm,width=8cm]{images/eeglab2.jpg}
-\caption[Wearable portable Digital Electroencephalograph]{EPOC Emotiv and Alpha Waves signals}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[height=7cm,width=7.8cm]{images/emotivsubject.jpg}}
+\end{column}
+\begin{column}{0.5\textwidth}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[height=3.5cm,width=8cm]{images/eeglab1.jpg}}
+\fbox{\includegraphics[height=3.5cm,width=8cm]{images/eeglab2.jpg}}
+\end{column}
+\end{columns}
+\caption{EPOC Emotiv and Alpha Waves signals}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
 \end{frame}
+
+\begin{frame}   
+\frametitle{Keypoint populations}
+\begin{figure}[]
+\centering
+\fbox{\includegraphics[width=7.5cm, height=7cm]{images/SignalWithFullDescriptors3.png}}
+\label{fig:digitalelectroencephalograph}
+\end{figure}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Alpha Waves wiggles}
@@ -507,25 +580,24 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{frame}
 
 \begin{frame}
-\frametitle{Mu a Greek letter}
+\frametitle{Experimental Validation}
 \begin{center}
-\LARGE Mu a Greek letter
+\LARGE $\mu$ Rhythm
 \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Mu a Greek letter}
+\frametitle{Dataset 002-2014 BNCI-Horizon 2020 (Steyrl, Scherer et al 2015)}
 \begin{figure}[thpb]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
-\includegraphics[scale=0.38]{images/DatasetIIIDiagram2}    
-\caption{\centering Dataset III: Motor Imagery \footfullcite{Steyrl, Scherer et al 2015}}
+\includegraphics[scale=0.35]{images/DatasetIIIDiagram2}    
 \end{figure} 	
 \end{frame}	
 
    \begin{frame}   
-   \frametitle{Mu a Greek letter}
+   \frametitle{$\mu$ Rhythm}
    \begin{figure}[thpb]
       \centering
       \setlength\fboxsep{0pt}
@@ -538,7 +610,7 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 	
 	
 	\begin{frame}
-	\frametitle{Mu a Greek letter}
+	\frametitle{$\mu$ Rhythm}
    \begin{figure}[thpb]
       \centering
       \setlength\fboxsep{0pt}
@@ -550,59 +622,79 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 	\end{frame}	  
 	    
 \begin{frame}
-\frametitle{Mu a Greek letter}
+\frametitle{Experimental Validation}
 \begin{center}
-\LARGE The P300 Wave
+\LARGE The P300 Waveform
 \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{P300-Based Speller Matrix}
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.3]{images/openvibep300matrix.png}
 \caption[P300 Speller Matrix]{Example of the $6 \times 6$ Speller Matrix from the OpenVibe software.  Rows and columns flash in random permutations.}
 \label{fig:p300matrix}
 \end{figure}
-
 \end{frame}    
 
+
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{The P300 Waveform - Signal Preprocessing}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=.45\linewidth]{images/nogain.eps}
+\includegraphics[width=.45\linewidth]{images/singlegain.eps}\\
+\includegraphics[width=.45\linewidth]{images/nogainzoomhit.eps}
+\includegraphics[width=.45\linewidth]{images/singlegainzoomhit.eps}
+\label{fig:gains}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Signal Averaging}
 \begin{center}
 \begin{figure}[htb]
 \centering
-\includegraphics[scale=0.3]{images/classificationgraph.pdf}
-\caption[P300 Speller Matrix Letter Identification]{For each column and row, an averaged, standardized and scaled signal $\tilde{x}^l(n,c)$ is obtained from the segments $S_i^l$  corresponding to the $\gls{ka}$ intensification sequences with $ 1 \leq i \leq k_a $ and location $l$ varying between $1$ and $12$. From the averaged signal, the image $I^{(l,c)}$ of the signal plot is generated and each descriptor is computed.  By comparing each descriptor $\mathbf{q}$  against the set of templates, the P300 ERP can be detected, and finally the desired letter from the matrix can be inferred.}
+\includegraphics[scale=0.5]{images/classificationgraph.pdf}
 \label{fig:classification}
 \end{figure}
 \end{center}
 \end{frame}     
 
-\begin{frame}
-\frametitle{The P300 Wave}
-\begin{center}
-\textbf{Step D:} Match to the calibration template $T^{bpc}$ by computing  
 
+\begin{frame}
+\frametitle{P300-Based BCI Speller - Letter Identification}
+\begin{center}
+\vspace{-\baselineskip}
+\vspace{-\baselineskip}
 \begin{equation}
 \hat{row} = \arg \min_{l \in \{1,\dots,6\}} \sum_{h=1}^{\gls{k}}  {\left\lVert \mathbf{q}^{(l,bpc)} -  \mathbf{d}_{h}^{(bpc)} \right\rVert}  ^{2}
 \label{eq:multiclassificationrow}
 \end{equation}
-
-\noindent and
-
 \begin{equation}
 \hat{col} = \arg \min_{l \in \{7,\dots,12\}} \sum_{h=1}^{\gls{k}}  {\left\lVert \mathbf{q}^{(l,bpc)} -  \mathbf{d}_{h}^{(bpc)} \right\rVert}  ^{2}
 \label{eq:multiclassificationcol}
 \end{equation}
 
-\noindent with $\mathbf{d}_{h}^{(bpc)}$ belonging to the set $N_T( \mathbf{q}^{(l,bpc)}  )$, which is defined, for the best performing channel,  as $N_T(\mathbf{q}^{(l,bpc)} ) = \{ \mathbf{d}_{h}^{(bpc)} \in T^{bpc} /  \mathbf{d}^{(bpc)} $  is the $\gls{k}$-nearest neighbor of $ \mathbf{q}^{(l,bpc)} \}$.  This procedure is a unary classification scheme, an adapted version of the algorithm described in Section~\ref{nbnn} to the letter identification required in the BCI-Based P300 Speller implementation.
+\begin{itemize}
+\item $l \in \{1,\dots,12\}$ speller matrix row/col index.
+\item $\hat{row}$  and $\hat{col}$ predicted row and col of the speller matrix.
+\item $\mathbf{q}^{(l,bpc)} $ query descriptor of matrix index $l$.
+\item $\mathbf{d}_{h}^{(bpc)} $ neighbors descriptors from the template.
+\item $\mathbf{d}_{h}^{(bpc)} \in N_T(  \mathbf{q}^{(l,bpc)} )$.
+\item $\hat{L}$ predicted class label.
+\item $\gls{k}$ the number of neighbors to pick from the template~\footfullcite{Boiman2008}.
+\end{itemize}
+
 \end{center}
 \end{frame}   
 
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{P300 Datasets}
 \begin{center}
 \begin{itemize}
  \item<1-> Dataset I - P300 ALS Public Dataset
@@ -613,12 +705,23 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{center}
 \end{frame} 
 
+\begin{frame}
+\frametitle{Alternative Methods used for comparison}
+\begin{center}
+\begin{itemize}
+ \item<1-> SVM.
+ \item<2-> SWLDA.
+ \item<3-> PE, MP-1, MP-2, SHCC.
+\end{itemize}
+\end{center}
+\end{frame} 
+
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{P300 Waveform - Dataset I}
 \begin{center}
 \begin{table}[h!]
-\caption[Dataset I - Single Channel Character Recognition Rates]{Dataset I: Character recognition rates for the public dataset of ALS patients using HIST calculated from single-channel plots.  Performance rates using single-channel signals with the SVM classifier are shown for comparison.  The best performing channel $bpc$ for each method is visualized}
+\caption{Character recognition rates public dataset of ALS patients.}
 \centering
 %% \tablesize{} %% You can specify the fontsize here, e.g.  \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{c|cc|cc}
@@ -643,12 +746,11 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{Character Identification Rates - Dataset I}
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=10cm]{images/performance.eps}
-\caption[Dataset I ALS Patients Dataset P300 Performance Curves]{Performance curves for the eight subjects included in the dataset I of ALS patients.  Three out of eight subjects achieved the necessary performance to implement a valid P300 speller.}
+\includegraphics[width=9.5cm]{images/performance.eps}
 \label{fig:performance}
 \end{figure}
 \end{center}
@@ -656,10 +758,10 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{The P300 Waveform - Dataset II}
 \begin{center}
 \begin{table}[h!]
-\caption[Dataset II - Single Channel Character Recognition Rates]{Dataset II: Character recognition rates and $bpc$  using HIST calculated from  single-channel signals.  Performance rates using single-channel signals with the SVM classifier are shown for comparison.}
+\caption{Character recognition rates for the Dataset of Healthy volunteers.}
 \centering
 %% \tablesize{} %% You can specify the fontsize here, e.g.  \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{c|cc|cc}
@@ -679,16 +781,15 @@ Hence, for each spatial bin $ i,j = \{0,1,2,3\} $, corresponding to the indexes 
 \end{tabular}
 \label{tab:resultsown}
 \end{table}
-HIST method has an improved performance at letter identification than SVM that process the signals on a channel by channel strategy (Wilcoxon signed-rank test, $p =  0.004$ for both datasets).
+(Wilcoxon signed-rank test, $p =  0.004$ for both datasets).
 \end{center}
 \end{frame} 
 
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{Dataset I Multichannel comparison}
 \begin{center}
 \begin{table}[h!]
-\caption[Dataset I - Comparisons of Character Recognition Rates]{Character recognition rates and the best performing channel $bpc$ for the public dataset I  using the HIST versus performance rates obtained by SWLDA and SVM classification algorithms with a multichannel concatenated feature.}
 \centering
 %% \tablesize{} %% You can specify the fontsize here, e.g.  \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{c|cc|c|c}
@@ -716,22 +817,9 @@ HIST method has an improved performance at letter identification than SVM that p
 
 
 \begin{frame}
-\frametitle{The P300 Wave}
-\begin{center}
-\begin{figure}[h!]
-\centering
-\includegraphics[width=10cm]{images/boxplots.png}
-\caption[Dataset I and II Performance Boxplots]{Boxplots obtained for the methods HIST and multichannel SVM and SWLDA for the Datsets I and II.  The achieved performance for the HIST method is similar to the performace obtained for the other methods (Quade test with $p=0.55$).}
-\label{fig:boxplots}
-\end{figure}
-\end{center}
-\end{frame} 
-
-\begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{Dataset II Multichannel Comparison}
 \begin{center}
 \begin{table}[h!]
-\caption[Dataset II - Comparisons of Character Recognition Rates]{Character recognition rates and the best performing channel $bpc$ for the  dataset II  using HIST versus performance rates obtained by SWLDA and SVM classification algorithms with a multichannel concatenated feature.}
 \centering
 %% \tablesize{} %% You can specify the fontsize here, e.g.  \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{c|cc|c|c}
@@ -749,7 +837,6 @@ HIST method has an improved performance at letter identification than SVM that p
 6     &     Pz   &      $50\%$ &    $35\%$  &     $30\%$ \\
 7     &     PO7   &      $70\%$ &  $25\%$  &     $30\%$ \\
 8     &     P4   &      $50\%$ &    $35\%$  &     $20\%$ \\
-
 %\bottomrule
 \end{tabular}
 \label{tab:resultsownswlda}
@@ -758,12 +845,23 @@ HIST method has an improved performance at letter identification than SVM that p
 \end{frame} 
 
 \begin{frame}
-\frametitle{The P300 Wave}
+\frametitle{Character Identification Rates for Dataset I and II}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{images/boxplots.png}
+\caption{Quade test with $p=0.55$.}
+\label{fig:boxplots}
+\end{figure}
+\end{center}
+\end{frame} 
+
+\begin{frame}
+\frametitle{P300 Waveforms for Subject 8 (A) and 3 (B)}
 \begin{center}
 \begin{figure}[h!]
 \centering
 \includegraphics[height=7cm,width=1\textwidth]{images/subject.png}\label{subject8}
-\caption[Sample P300 Patches]{Ten sample P300 template patches for Subjects 8 (A) and 3 (B) of the public Dataset I of ALS patients.}  %Downward deflection is positive polarity. 
 \label{fig:p300templates}
 \end{figure}
 \end{center}
@@ -777,22 +875,51 @@ Additionally, the stability of the P300 component waveform has been extensively 
 \end{frame} 
     
 
+\begin{frame}
+\frametitle{P300 Pseudo-Real Dataset III Performance Results }    
+\begin{table}[h!]
+\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g.  \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{ccccc}
+\toprule
+\textbf{Method}	& \textbf{$\gls{bpc}$} &   \multicolumn{3}{c}{Performance} \\
+%\cline{3-5} \\
+ 	&  &  \textbf{Experiment 1} & \textbf{Experiment 2}	& \textbf{Experiment 3}\\
+\midrule
+MP 1 & PO8  & $67\%$ & $15\%$ & $50\%$\\
+MP 2 & PO7 & $24\%$ & $6\%$ & $10\%$\\
+HIST  & PO8 & $91\%$ & $18\%$ & $66\%$\\
+PE     & Cz & $61\%$ & $9\%$ & $32\%$\\
+SHCC & P4 & $98\%$ & $31\%$ & $80\%$\\
+SVM     & PO8  & $78\%$ & $7\%$ & $53\%$\\
+\bottomrule
+\end{tabular}
+\label{tab:results}
+\end{table}    
+\end{frame} 
+
+\begin{frame}
+\frametitle{The P300 Wave - Dataset IV BCI Competition 2003 }    
+\begin{table}[h!]
+\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g.  \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{ccc}
+\toprule
+\textbf{Method}	& \textbf{$\gls{bpc}$} &  \textbf{Performance} \\
+\midrule
+MP 1 & FC2  & $50\%$ \\
+MP 2 & CPz & $22\%$ \\
+HIST  & Cz & $67\%$ \\
+PE     & PO8 & $22\%$ \\
+SHCC & Cz & $61\%$ \\
+SVM     & C1  & $32\%$ \\
+\bottomrule
+\end{tabular}
+\label{tab:bcicompetitionresults}
+\end{table}
+\end{frame} 
     
     \section{Conclusion}
-    \begin{frame}
-        \frametitle{Dissertation Contributions}
-        \begin{center}
-            \begin{itemize}
-                \item A procedure to construct analyzable 2D-images based on one-dimensional signals.
-                \item The introduction of the HIST method as an enhancement on the SIFT technique to allow non-squared patches and to adapt it to signal plots.
-                \item A mapping procedure to link EEG time-series characteristics to features of 2D-images.
-                \item A feature extraction method for EEG signals that can be used objectively to encode a representation of the waveform.
-                \item A classification algorithm that use the encoded representation with the purpose of comparing and identifying waveforms for BCI applications.
-            \end{itemize}
-        \end{center}
-    \end{frame}    
-
-
 \begin{frame}
 \frametitle{Conclusion}
 \begin{center}
@@ -804,26 +931,54 @@ Additionally, the stability of the P300 component waveform has been extensively 
 \frametitle{Conclusion}
 \begin{center}
 \begin{itemize}
-\item EEG Waveforms can be analyzed by this method.
-\item Oscillatory processes can be studied by this methodology.
-\item The stability of ERP transient components can be studied objectively with the proposed methodology.
+\item \Fontre EEG Waveforms features can be objectively analyzed.
+\item \Fontre The stability of ERP transient components.
+\item \Fontre Intelligible System foster clinical collaboration.
 \end{itemize}
 \end{center}
 \end{frame}    
     
-    
-    \section{References}
-    \begin{frame} %Biblio
-        \frametitle{References}
+%\begin{frame}
+%\frametitle{Conclusion}
+%\begin{center}
+%\LARGE Dissertation Contributions
+%\end{center}
+%\end{frame}
+%
+%    \begin{frame}
+%        \frametitle{Dissertation Contributions}
+%        \begin{center}
+%            \begin{itemize}
+%                \item Método de generación de imagenes
+%                \item Modificación de SIFT para identificar señales en plots.
+%                \item Un algoritmo de clasificación y una adaptación para spellers
+%                \item Implementaciones concretas.
+%            \end{itemize}
+%        \end{center}
+%    \end{frame}    
 
-    \end{frame}
-    
-    
+    \begin{frame}
+        \frametitle{Future Work}
+        \begin{center}
+            \begin{itemize}
+                \item \Fontre Multichannel extension.
+                \item \Fontre Keypoint localization.
+                \item \Fontre Neuroimaging.
+            \end{itemize}
+        \end{center}
+    \end{frame}       
+   
         \section{Questions}
     \begin{frame} %Biblio
         \frametitle{Questions}
         \begin{center}
         \LARGE Questions?
+        \end{center}
+    \end{frame}
+    
+    \begin{frame} %Biblio
+        \begin{center}
+        \LARGE Thank you very much
         \end{center}
     \end{frame}
 
