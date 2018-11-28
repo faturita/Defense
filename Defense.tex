@@ -982,26 +982,6 @@ SVM     & C1  & $32\%$ \\
         \end{center}
     \end{frame}
 
-\begin{frame}
-\frametitle{Sample frame title}
-This is a text in first frame. This is a text in first frame. This is a text in first frame.
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Sample frame title}
-This is a text in second frame. 
-For the sake of showing an example.
- 
-\begin{itemize}
- \item<1-> Text visible on slide 1
- \item<2-> Text visible on slide 2
- \item<3> Text visible on slide 3
- \item<4-> Text visible on slide 4
-\end{itemize}
- 
-\end{frame}
-
 
 \begin{frame}
 \frametitle{Sample frame title}
@@ -1014,7 +994,7 @@ For the sake of showing an example.
 \item Artifact Rejection
 \item Spatial Filter
 \end{itemize}
-An excellent review can be found here~\cite{Simons2016}.
+An excellent review can be found here~\footfullcite{Simons2016}.
 \end{frame}
 
 
@@ -1027,31 +1007,27 @@ An excellent review can be found here~\cite{Simons2016}.
 \end{equation}
 \end{frame}
 
-\begin{frame}
-\frametitle{Sample frame title}
+%\begin{frame}
+%\frametitle{Sample frame title}
+% 
+%In this slide, some important text will be
+%\alert{highlighted} beause it's important.
+%Please, don't abuse it.
  
-In this slide, some important text will be
-\alert{highlighted} beause it's important.
-Please, don't abuse it.
- 
-\begin{block}{Remark}
-Sample text
-\end{block}
- 
-\begin{alertblock}{Important theorem}
-Sample text in red box
-\end{alertblock}
- 
-\begin{examples}
-Sample text in green box. "Examples" is fixed as block title.
-\end{examples}
-\end{frame}
+%\begin{block}{Remark}
+%Sample text
+%\end{block}
+% 
+%\begin{alertblock}{Important theorem}
+%Sample text in red box
+%\end{alertblock}
+% 
+%\begin{examples}
+%Sample text in green box. "Examples" is fixed as block title.
+%\end{examples}
+%\end{frame}
 
-    \begin{frame}
-        \begin{center}
-            \LARGE Method   
-        \end{center}
-    \end{frame}
+
     
     \begin{frame}
         \frametitle{Signal Transformation}
@@ -1144,19 +1120,7 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
         \end{center}
     \end{frame}   
     
-    \begin{frame}
-        \frametitle{SIFT Descriptors}
-        \begin{center}
-   			\begin{figure}[thpb]
-      		\centering
-      		\setlength\fboxsep{0pt}
-	  		\setlength\fboxrule{0.5pt}
-       		\fbox{\includegraphics[scale=0.8]{images/BaselineDescriptorZoom.png}}
-      		\caption{\centering  SIFT Descriptor with its corresponding gradient tendencies.}
-      		\label{figure1}
-   			\end{figure}        
-        \end{center}
-    \end{frame}   
+
     
     \begin{frame}
         \frametitle{SIFT Descriptors}
@@ -1201,21 +1165,7 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
        % \end{center}
     %\end{frame}   
     
-    \begin{frame}
-        \frametitle{Keypoint Localization}
-        \begin{center}
-   			\begin{figure}[thpb]
-      			\centering
-      			\setlength\fboxsep{0pt}
-	  			\setlength\fboxrule{0.5pt}
-       			%\fbox{\includegraphics[scale=1.5]{images/KeypointLocations2.png}}
-       			\fbox{\includegraphics[scale=0.58]{images/SignalWithFullDescriptors.png}}
-      			\caption{\centering Keypoints are $ (z_1, z_2) $ points on the image where descriptors are extracted.}
-      			\label{figure1}
-   			\end{figure}        
-        \end{center}
-    \end{frame}      
-     
+
 \begin{frame}
 \frametitle{Brain Computer Interfaces - Chronology}
 \begin{center}
@@ -1243,102 +1193,8 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
 \end{center}
 \end{frame}     
     
-    \begin{frame}
-        \frametitle{Classification}
-        \begin{center}
-            \begin{itemize}
-                \item Discriminative Semi-supervised classification method was used:  Naive Bayes Nearest Neighbor, NBNN\footfullcite{Boiman, Shechtman, Irani 2008} algorithm:
-			\end{itemize}
-                
-                
-$$
-\hat{C} = \argmin_C \sum {\lVert  d_i - NN_C(d_i)  \rVert}^2 \eqno{(3)}
-$$                 
-   
-where $ \hat{C} $ is estimated Class to which this image (and underlying EEG signal windows) should belong whereas $ d_i $ is the i-th descriptor obtained from the query image and  $ NN_C(d_i)  $ is the near neighbor descriptor for each class.         
-                
-        \end{center}
-    \end{frame}
-    
-    % Graph NBNN
-    \begin{frame}
-        \frametitle{Classification}
-        \begin{center}
-            \item \includegraphics[scale=0.38]{images/NBNNMethod1.png}     
-        \end{center}
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{Classification}
-        \begin{center}
-            \item \includegraphics[scale=0.38]{images/NBNNMethod2.png}        
-        \end{center}
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{Classification}
-        \begin{center}
-            \item \includegraphics[scale=0.38]{images/NBNNMethod3.png}    
-        \end{center}
-    \end{frame}    
 
-    \begin{frame}
-        \frametitle{Classification}
-        \begin{center}
-            \item \includegraphics[scale=0.38]{images/NBNNMethod4.png}     
-        \end{center}
-    \end{frame}    
-    
-    \begin{frame}
-        \frametitle{Classification}
-        \begin{center}
-            \item \includegraphics[scale=0.38]{images/NBNNMethod5.png}     
-        \end{center}
-    \end{frame}    
-    
-    
-    \begin{frame}
-        \begin{center}
-            \LARGE Offline Results   
-        \end{center}
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{Dataset I: Subject Independent $\alpha $ Waves \footfullcite{Ramele, Villar, Santos 2014}}        
-   \begin{figure}[thpb]
-      \centering
-      \setlength\fboxsep{0pt}
-	  \setlength\fboxrule{0.5pt}
-       \fbox{\includegraphics[scale=0.46]{images/Dataset1AccuracyPerChannel.eps}}
-      \caption{\centering 10-Fold Cross validated accuracy values for 10 subjects.}
-      \label{figure2}
-   \end{figure}   
-    \end{frame}
-    
-    
-    \begin{frame}
-      \frametitle{Dataset II: EEG Dataset, Runs 1 and 2 \footfullcite{Goldberg et al 2000, Schalk 2004}}
-   \begin{figure}[thpb]
-      \centering
-      \setlength\fboxsep{0pt}
-	  \setlength\fboxrule{0.5pt}
-       \fbox{\includegraphics[scale=0.58]{images/DatasetPhysionetAccuracyPerChannel}}
-      \caption{\centering 10-Fold Cross validated accuracies values for one random subject.}
-      \label{figure2}
-   \end{figure}          
-    \end{frame}    
 
-    \begin{frame}
-    \frametitle{Dataset II: EEG Dataset, Runs 1 and 2 \footfullcite{Goldberg et al 2000, Schalk 2004}}
-   \begin{figure}[thpb]
-      \centering
-      \setlength\fboxsep{0pt}
-	  \setlength\fboxrule{0.5pt}
-       \fbox{\includegraphics[scale=0.63]{images/DatasetPhysionetBoxPlots}}
-      \caption{\centering 10-Fold Cross validated accuracies for O1, Oz, O2 and Iz channels for 25 subjects.}
-      \label{figure2}
-   \end{figure}          
-    \end{frame}            
         
    %\begin{frame}     
    %\begin{figure}[thpb]
@@ -1352,47 +1208,13 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
    %\end{figure}  
     %\end{frame}
     
-    
-	\begin{frame}
-	  \frametitle{Dataset III: Motor Imagery \footfullcite{Steyrl, Scherer et al 2015}}
-       \includegraphics[scale=0.38]{images/DatasetIIIDiagram2}    
-    \end{frame}
-   
-   
-   \begin{frame}   
-   \begin{figure}[thpb]
-      \centering
-      \setlength\fboxsep{0pt}
-	  \setlength\fboxrule{0.5pt}
-       \fbox{\includegraphics[scale=0.45]{images/DatasetMIBCISimulation1}}
-      \caption{\centering Accuracy for the BCI Simulation classifying Baseline vs. RH (Right Hand) motor imagery.}
-      \label{figure3}
-   \end{figure} 	
-	\end{frame}	  
+
+
 	
 	
-	\begin{frame}
-   \begin{figure}[thpb]
-      \centering
-      \setlength\fboxsep{0pt}
-	  \setlength\fboxrule{0.5pt}
-       \fbox{\includegraphics[scale=0.45]{images/DatasetMIBCISimulation2}}
-      \caption{\centering Accuracy for the BCI Simulation classifying Baseline vs. FM (Feet Movement) motor imagery.}
-      \label{figure3}
-   \end{figure} 	
-	\end{frame}	  
+
     
-    \begin{frame}
-   \begin{figure}[thpb]
-      \centering
-      \setlength\fboxsep{0pt}
-	  \setlength\fboxrule{0.5pt}
-       \fbox{\includegraphics[scale=0.23]{images/DatasetMIBCISimulation1}}
-       \fbox{\includegraphics[scale=0.23]{images/DatasetMIBCISimulation2}}
-      \caption{\centering Comparative results obtained for the Offline BCI Simulation using MI RH (left) and MI FM (right)}
-      \label{figure3}
-   \end{figure}  
-    \end{frame}
+
     
 \begin{frame}    
 \begin{figure}[htb]
@@ -1407,7 +1229,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}    
 \begin{figure}[]
 \centering
-\includegraphics[height=4cm,width=1\textwidth]{images/volconduction1.png}
+\includegraphics[height=4cm,width=1\textwidth]{images/volconduction1.png}\\
 \includegraphics[height=4cm,width=1\textwidth]{images/volconduction2.png}
 \caption[EEG Volume Conduction]{A source signal with positive/negative polarity is generated in a very specific region of the brain but due to volume conduction their influence affects a widespread area of the scalp where sensors are located (Image of the brain from Swartz Center for Computational Neuroscience).}
 \label{fig:volconduction}
@@ -1428,7 +1250,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}   
 \begin{figure}[]
 \centering
-\includegraphics[height=9cm,width=1\textwidth]{images/hype.png}
+\includegraphics[height=7.8cm,width=1\textwidth]{images/hype.png}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
@@ -1437,7 +1259,7 @@ where $ \hat{C} $ is estimated Class to which this image (and underlying EEG sig
 \begin{frame}   
 \begin{figure}[]
 \centering
-\includegraphics[height=9cm,width=1\textwidth]{images/Cic.png}
+\includegraphics[height=7.8cm,width=1\textwidth]{images/Cic.png}
 \caption[Wearable portable Digital Electroencephalograph]{Digital and wearable electroencephalographs.}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
