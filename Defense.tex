@@ -204,8 +204,8 @@ Instituto Tecnológico de Buenos Aires
         \frametitle{Brain Computer Interfaces - Problem Statement}
         \begin{center}
             \begin{itemize}
-                \item<1-> Clinical and Physician involvement~\footfullcite{Yuste2017}
-                \item<2-> Practical, relevant, and invariant features that convey good-enough information~\footfullcite{Perdikis2014}.
+                \item<1-> \Fontre Clinical and Physician involvement~\footfullcite{Yuste2017}
+                \item<2-> \Fontre Practical, relevant, and invariant features that convey good-enough information~\footfullcite{Perdikis2014}.
             \end{itemize}
         \end{center}
     \end{frame} 
@@ -222,8 +222,8 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{What we aim to do}
 \begin{center}
 \begin{enumerate}
-\item<1-> \Fontre Construct analyzable 2D-images.
-\item<2-> \Fontre Adaptation to the SIFT method to EEG time-series
+\item<1-> \Fontre Construct analyzable 2D-image plots.
+\item<2-> \Fontre Adaptation of the SIFT method to EEG time-series
 \item<3-> \Fontre Feature extraction procedure
 \item<4-> \Fontre Classification algorithm
 \end{enumerate}
@@ -246,11 +246,11 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Waveform-Based Algorithms}
 \begin{center}
 \begin{itemize}
- \item<1-> Peak Picking/aEEG/PAA
- \item<2-> Merge of Increasing and Decreasing Sequences
- \item<3-> Permutation Entropy 
- \item<4-> Matching Pursuit
- \item<5-> Slope Horizontal Chain Code
+ \item<1-> \Fontre Peak Picking/aEEG/PAA
+ \item<2-> \Fontre Merge of Increasing and Decreasing Sequences
+ \item<3-> \Fontre Permutation Entropy - PE
+ \item<4-> \Fontre Matching Pursuit - MP
+ \item<5-> \Fontre Slope Horizontal Chain Code - SHCC
 \end{itemize}
 \end{center}
 \end{frame}
@@ -269,11 +269,11 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{The Histogram of Gradient Orientations - Feature Extraction Algorithm}
 \begin{center}
 \begin{enumerate}
- \item<1-> Signal Preprocessing
- \item<2-> Signal Segmentation
- \item<3-> Signal Plotting
- \item<4-> Keypoint Localization
- \item<5-> Calculation of the Histogram of Gradient Orientation
+ \item<1-> \Fontre Signal Preprocessing
+ \item<2-> \Fontre Signal Segmentation
+ \item<3-> \Fontre Signal Plotting
+ \item<4-> \Fontre Keypoint Localization
+ \item<5-> \Fontre Calculation of the Histogram of Gradient Orientation
 \end{enumerate}
 \end{center}
 \end{frame}
@@ -346,7 +346,6 @@ Instituto Tecnológico de Buenos Aires
 \fbox{\includegraphics[width=7cm, height=2.5cm]{images/gradientsdescriptors.png}}\\
 \fbox{\includegraphics[width=7cm, height=2.5cm]{images/samplegradients.png}}
 \fbox{\includegraphics[width=7cm, height=2.5cm]{images/histogramchart.eps}}
-\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
 \label{fig:sampledescriptor}
 \end{figure}
 \end{center}
@@ -361,7 +360,6 @@ Instituto Tecnológico de Buenos Aires
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=14cm,height=6cm]{images/signalpatchkeypoint.png}}
-\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
 \label{fig:sampledescriptor}
 \end{figure}
 \end{center}
@@ -375,7 +373,6 @@ Instituto Tecnológico de Buenos Aires
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=14cm,height=6cm]{images/gradientsdescriptors.png}}
-\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
 \label{fig:sampledescriptor}
 \end{figure}
 \end{center}
@@ -389,7 +386,6 @@ Instituto Tecnológico de Buenos Aires
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=14cm,height=6cm]{images/samplegradients.png}}
-\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
 \label{fig:sampledescriptor}
 \end{figure}
 \end{center}
@@ -403,7 +399,6 @@ Instituto Tecnológico de Buenos Aires
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=10cm,height=6cm ]{images/histogramchart.eps}}
-\caption[Histogram of Gradient Orientations]{Patch and vector field of oriented gradients.}
 \label{fig:sampledescriptor}
 \end{figure}
 \end{center}
@@ -497,9 +492,9 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Experimental Validation}
 \begin{center}
 \begin{itemize}
- \item<1-> Alpha Waves Wiggles
- \item<2-> $\mu$ Rhythm
- \item<3-> The P300 Waveform
+ \item<1-> \Fontre Alpha Waves Wiggles
+ \item<2-> \Fontre $\mu$ Rhythm
+ \item<3-> \Fontre The P300 Waveform
 \end{itemize}
 \end{center}
 \end{frame}     
@@ -515,8 +510,14 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Alpha Waves Datasets}
 \begin{center}
 \begin{itemize}
-\item Dataset I: 128 Hz, 14 channels, 10 subjects, 10 class 1 vs 10 class 2.
-\item Dataset II: 160 Hz, 64 channes, 25 subjects, Run 1 vs Run 2, 60 vs 60.
+\item \Fontre Dataset I: EPOC Emotiv Consumer Grade EEG Device 
+\begin{itemize}
+\item 128 Hz, 14 channels, 10 subjects, 10 class 1 vs 10 class 2.
+\end{itemize}
+\item \Fontre Dataset II: EEG MI NHS PhysioNet
+\begin{itemize}
+\item 160 Hz, 64 channels, 25 subjects, Run 1 vs Run 2, 60 vs 60.
+\end{itemize}
 \end{itemize}
 \end{center}
 \end{frame}
@@ -554,27 +555,27 @@ Instituto Tecnológico de Buenos Aires
 
 
 \begin{frame}
-\frametitle{Alpha Waves wiggles}
+\frametitle{10-Fold Cross Validated Binary Classification Accuracy - Dataset I}
 \begin{figure}[h!]
 \centering
 %\subfigure[Ten-fold cross-validated accuracy values, averaged across $10$ subjects.  Descriptors used for calibration are intermixed to create one template dictionary which is used for all subjects.]
 \includegraphics[width=7.5cm, height=5cm]{images/Dataset1AccuracyPerChannel}
 %\subfigure[Amplified image containing a sample patch located on one of the images generated for one 1-second long segment of this dataset. The keypoint location is on a sample point along the EEG trace.]
 \includegraphics[width=7.5cm, height=5cm]{images/AlphaWaveSampleEEG.png}
-\caption[Dataset I Classification Rate]{Dataset I: The classification accuracy is maximum on occipital channels O1 and O2. The horizontal patch scale $\gls{St}$ and the vertical patch scale $\gls{Sv}$ are set to $1$, whereas $\gls{gamma}$ and $\gls{gammat}$ are set to $2$, which corresponds to a variation of $\gls{DeltamuV} = 10$ microvolts in the signal amplitude during $\gls{lambda}=0.08$ $\si{seconds}$.}
+\caption{The horizontal patch scale $\gls{St}$ and the vertical patch scale $\gls{Sv}$ are set to $1$, whereas $\gls{gamma}$ and $\gls{gammat}$ are set to $2$, which corresponds to a variation of $\gls{DeltamuV} = 10$ microvolts in the signal amplitude during $\gls{lambda}=0.08$ $\si{seconds}$.}
 \label{fig:alpharesultsdataseti}
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Alpha Waves wiggles}
+\frametitle{10-Fold Cross Validated Binary Classification Accuracy - Dataset II}
 \begin{figure}[h!]
 \centering
 %\subfigure[Ten-fold cross-validated accuracies values for a randomly selected subject (number 12), using runs 1 and 2.]
 \includegraphics[width=7.5cm, height=5cm]{images/DatasetPhysionetAccuracyPerChannel}
 %\subfigure[Ten-fold cross-validated accuracy boxplots for occipital channels O1, Oz, O2 and Iz, for the 25 subjects. Mean values are around $70\%$.]
 \includegraphics[width=7.5cm, height=5cm]{images/DatasetPhysionetBoxPlots}
-\caption[PhysioNet Dataset Binary Classification Accuracy]{Dataset II: Classification Accuracy for segments of 1s ($\gls{N} = 160$) of EEG, between class 1 and class 2.  In this case as the sampling frequency $\gls{Fs}$ is lower, the signal span is $\gls{lambda} = 0.06$   $\si{s}$}.
+\caption{Binary classification accuracy for subject 25 and boxplots obtained for the 25 subjects on 4 occipital channels}.
 \label{fig:alpharesultsdatasetii}
 \end{figure}
 \end{frame}
@@ -592,7 +593,7 @@ Instituto Tecnológico de Buenos Aires
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
-\includegraphics[scale=0.35]{images/DatasetIIIDiagram2}    
+\includegraphics[scale=0.34]{images/DatasetIIIDiagram2}    
 \end{figure} 	
 \end{frame}	
 
@@ -632,8 +633,8 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{P300-Based Speller Matrix}
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.3]{images/openvibep300matrix.png}
-\caption[P300 Speller Matrix]{Example of the $6 \times 6$ Speller Matrix from the OpenVibe software.  Rows and columns flash in random permutations.}
+\includegraphics[width=12.5cm,height=6.7cm]{images/openvibep300matrix.png}
+\caption{OpenVibe software $6 \times 6$ Speller Matrix.  Rows and columns flash in random permutations.}
 \label{fig:p300matrix}
 \end{figure}
 \end{frame}    
@@ -697,10 +698,19 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{P300 Datasets}
 \begin{center}
 \begin{itemize}
- \item<1-> Dataset I - P300 ALS Public Dataset
- \item<2-> Dataset II - P300 for healthy subjects
- \item<3-> Dataset III - P300 Pseudo-Real Dataset Generation
- \item<4-> Dataset IV - P300 Dataset IIb BCI Competition II (2003)
+ \item<1-> \Fontre Dataset I - P300 ALS Public Dataset 
+ \begin{itemize}
+ \item 8 subjects, 8 channels, Fs=256 Hz, 7 words, 5 letters, ISI=0.125 s, 10 epochs
+ \end{itemize}
+ \item<2-> \Fontre Dataset II - P300 for Healthy subjects
+ \item<3-> \Fontre Dataset III - P300 Pseudo-Real Dataset 
+ \begin{itemize}
+ \item 1 subject, null-signals
+ \end{itemize}
+ \item<4-> \Fontre Dataset IV - P300 Dataset IIb BCI Competition II (2003) 
+ \begin{itemize}
+ \item 1 subject, 64 channels, Fs=240 Hz, 73 trials, 42 train and 31 test, ISI=0.25 s, 15 epochs
+ \end{itemize}
 \end{itemize}
 \end{center}
 \end{frame} 
@@ -709,9 +719,12 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Alternative Methods used for comparison}
 \begin{center}
 \begin{itemize}
- \item<1-> SVM.
- \item<2-> SWLDA.
- \item<3-> PE, MP-1, MP-2, SHCC.
+ \item<1-> \Fontre Support Vector Machine SVM
+ \item<2-> \Fontre Stepwise Linear Discriminant Analysis SWLDA.
+ \item<3-> \Fontre Permutation Entropy %(m=3, w=10)
+ \item<4-> \Fontre Matching Pursuit 1 MP-1 %(Daubechies least-symmetric wavelets, 2 vanishing moments)
+ \item<5-> \Fontre Matching Pursuit 2 MP-2
+ \item<6-> \Fontre Slope Horizontal Chain Code SHCC.
 \end{itemize}
 \end{center}
 \end{frame} 
@@ -781,7 +794,6 @@ Instituto Tecnológico de Buenos Aires
 \end{tabular}
 \label{tab:resultsown}
 \end{table}
-(Wilcoxon signed-rank test, $p =  0.004$ for both datasets).
 \end{center}
 \end{frame} 
 
@@ -866,13 +878,6 @@ Instituto Tecnológico de Buenos Aires
 \end{figure}
 \end{center}
 \end{frame} 
-
-\begin{frame}
-\frametitle{The P300 Wave}
-\begin{center}
-Additionally, the stability of the P300 component waveform has been extensively studied in patients with ALS \cite{SellersandEmanuelDonchin2006,TomohiroMadarame2008,Nijboer2009,Mak2012,McCane2015} where it was found that these patients have a stable P300 component, which were also sustained across different sessions.  In line with these results we do not find evidence of a difference in terms of the performance obtained by analyzing the waveforms, by using the HIST method, for the group of patients with ALS and the healthy group of volunteers (Mann-Whitney U Test, $p=0.46$). Particularly, the best performance is obtained for a subject from the ALS dataset for which, based on visual observation, the shape of they P300 component is consistently identified.
-\end{center}
-\end{frame} 
     
 
 \begin{frame}
@@ -926,14 +931,60 @@ SVM     & C1  & $32\%$ \\
 \LARGE Conclusion
 \end{center}
 \end{frame}
+
+\begin{frame}
+\frametitle{Findings}
+\begin{center}
+\begin{itemize}
+\item \Fontre $\alpha$ and $\mu$ waves can be identified by their waveforms.
+\item \Fontre Occipital regions more prominent P300 waveforms.
+\item \Fontre The stability of ERP transient components in ALS patients 
+\begin{itemize}
+\item Mann-Whitney U Test, $p=0.46$
+\end{itemize}
+\item \Fontre Latency jitter 
+\begin{itemize}
+\item Wilcoxon rank sum test, one tail, $p=0.0022$
+\end{itemize}
+\item \Fontre Amplitude resistance 
+\begin{itemize}
+\item Wilcoxon rank sum test, two tails, $p=0.17$
+\end{itemize}
+\end{itemize}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Thesis Contributions}
+\begin{center}
+\begin{itemize}
+\item \Fontre Method to construct analyzable image plots.
+\item \Fontre EEG Waveform Feature Extraction Procedure
+\item \Fontre SIFT extension and modification: HIST
+\item \Fontre Classification algorithm
+\end{itemize}
+\end{center}
+\end{frame}        
+
+\begin{frame}
+\frametitle{Practical Contributions}
+\begin{center}
+\begin{itemize}
+\item \Fontre P300-Dataset on Kaggle
+\item \Fontre Registered as EEGWave Code Ocean Reproducible Research Online Platform
+\item \Fontre Online Application based on OpenVibe and LSL.
+\item \Fontre BCI Online Blog
+\item \Fontre Matlab toolbox for Computer Vision EEG Analysis.
+\end{itemize}
+\end{center}
+\end{frame} 
     
 \begin{frame}
 \frametitle{Conclusion}
 \begin{center}
 \begin{itemize}
-\item \Fontre EEG Waveforms features can be objectively analyzed.
-\item \Fontre The stability of ERP transient components.
-\item \Fontre Intelligible System foster clinical collaboration.
+\item \Fontre EEG Waveforms can be objectively analyzed.
+\item \Fontre Inherent Intelligible System may foster clinical collaboration.
 \end{itemize}
 \end{center}
 \end{frame}    
@@ -945,22 +996,13 @@ SVM     & C1  & $32\%$ \\
 %\end{center}
 %\end{frame}
 %
-%    \begin{frame}
-%        \frametitle{Dissertation Contributions}
-%        \begin{center}
-%            \begin{itemize}
-%                \item Método de generación de imagenes
-%                \item Modificación de SIFT para identificar señales en plots.
-%                \item Un algoritmo de clasificación y una adaptación para spellers
-%                \item Implementaciones concretas.
-%            \end{itemize}
-%        \end{center}
-%    \end{frame}    
+
 
     \begin{frame}
         \frametitle{Future Work}
         \begin{center}
             \begin{itemize}
+                \item \Fontre BCI Paradigms Potential Universal Applicability
                 \item \Fontre Multichannel extension.
                 \item \Fontre Keypoint localization.
                 \item \Fontre Neuroimaging.
@@ -984,7 +1026,7 @@ SVM     & C1  & $32\%$ \\
 
 
 \begin{frame}
-\frametitle{Sample frame title}
+\frametitle{Preprocessing steps}
 \begin{itemize}
 \item Notch filter:
 \item Band-pass filter
@@ -1000,7 +1042,12 @@ An excellent review can be found here~\footfullcite{Simons2016}.
 
 
 \begin{frame}
-\frametitle{Sample frame title}
+\frametitle{Histogram of Gradient Orientation - Trilinear Interpolation}
+\begin{equation}
+ \omega_{ij}(\mathbf{v}) = \omega \bigg ( \frac{5 \;v_x}{\gls{Deltas} \; \gls{St}} - x_i \bigg ) \omega \bigg ( \frac{5 \; v_y}{\gls{Deltas} \; \gls{Sv}} - y_i \bigg ) 
+\label{eq:ij}
+\end{equation}
+
 \begin{equation}
  \omega_\mathrm{ang}(\alpha) = \sum_{r=-1}^{1} \omega \bigg ( \frac{8\alpha}{2\pi} + 8r \bigg )
 \label{eq:wang}
@@ -1026,60 +1073,34 @@ An excellent review can be found here~\footfullcite{Simons2016}.
 %Sample text in green box. "Examples" is fixed as block title.
 %\end{examples}
 %\end{frame}
-
-
-    
-    \begin{frame}
-        \frametitle{Signal Transformation}
-        \begin{center}           
-
-Single Channel transformation of the EEG multichannel time series matrix into an image
-\begin{equation}
-\mathscr{T}\{x(t,c,V)=0\} \mapsto I(z_1,z_2, \mathcal{C}, \mathcal{I}) = 0
-\end{equation}
-where $ t $ is time, $ c $ is the specified channel, $ V $ is the voltage value for the signal, $ \mathcal{C} $ is the color channel for an image and  $ \mathcal{I} $ is the pixel value intensity.
-
-\vspace{17pt}
-
-Plot Generation: The EEG matrix is transformed to a binary bidimensional image $ (t,c,V) \mapsto (t, V, Grey, \mathcal{I}) $ with $\mathcal{I} = 0$ or  $\mathcal{I} = 255$ for each $ c $.
-
-		\end{center}
-	\end{frame}
 	
 	\begin{frame}
-	\frametitle{Signal Transformation: Visually centering the signal over the image.}
+	\frametitle{EEG Signal Plot - Zero Level and Standardization}
 	\begin{center}
 
-First the non-zero media is removed from the signal.
-	
 \begin{equation}
-\tilde{x}(t,c) = \lfloor  \delta .(  x(t,c) - \bar{x}(c)  )   \rfloor 
-\end{equation}
-	
-And the signal is centered on the image
-
-\begin{equation}
-h(c) = ( \max{} \tilde{x}(t,c) - \min{} \tilde{x}(t,c) ) + \sigma 
+\tilde{x}(n,c) =  \frac{ x(n,c) - \bar{x}(c) }{ \hat{\sigma}(c) } 
+\label{eq:standarizedaverages}
 \end{equation}
 
 \begin{equation}
-Z(c) = \lfloor \frac{h(c)}{2} \rfloor - \lfloor \frac{\max{} \tilde{x}(t,c) + \min{} \tilde{x}(t,c)}{2} \rfloor 
+z(c) = \left \lfloor{ \frac{\max_{n} \tilde{x}(n,c)  - \min_{n} \tilde{x}(n,c) }{2} }\right \rfloor -   \left \lfloor{ \frac{\max_{n} \tilde{x}(n,c)  + \min_{n} \tilde{x}(n,c)}{ 2} }\right \rfloor
+\label{eq:zerolevel}
 \end{equation}
-
-where $ t $ is time, $ \delta $ is scale factor,  $ c $ is the channel parameter, $ x(t,c) $ is the EEG matrix whereas $ \bar{x}(c) $ is the mean value for each channel,  $ h(c) $ is the height of the image in pixels, $ \sigma $ is the descriptor size and $ Z(c) $ is the horizontal pixel at which the zero value of the signal will be located.
 
 	\end{center}
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Signal Transformation: Binary Image generation.}
+	\frametitle{EEG Signal Plot}
 	\begin{center}
 	
 \begin{equation}
-I(z_1,z_2) = \left\{ \begin{array}{rl}
-255      & z_1 = \delta \cdot t;  z_2 = \tilde{x}(t,c) + Z(c)   \\
+\mathcal{I}^{(c)}(z_1,z_2) = \left\{ \begin{array}{rl}
+255 & \text{if} \   z_1 = \gamma_{t} \  n \quad \text{and}  \quad z_2 = \left\lfloor \gamma \; \tilde{x}(n,c) \right\rceil + z(c) \\
 0   & \mbox{otherwise}
-\end{array}\right. 
+\end{array}\right.
+\label{eq:images}
 \end{equation}
 
 		\includegraphics[scale=2]{images/SignalSample.png} 
@@ -1098,13 +1119,6 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
      %   \end{center}
     %\end{frame}
     
-    \begin{frame}
-    \frametitle{Features: SIFT\footfullcite{Lowe 2004} Descriptors}
-    
-    Scale Invariant Feature Transform Descriptors are local features of an image that represents gradient changes in intensities.  They are 128-dimensional vectors that contains the histograms of relative gradient directions on each of the blocks that each patch is divided (4x4=16 blocks, 8 rotational directions on each).  A single scale ($ \sigma = 1 $) is composed of 4 blocks of 3 pixels on each side (12x12).
-    
-        \includegraphics[scale=0.5]{images/sift-conv-vlfeat.png}     
-    \end{frame}
     
     \begin{frame}
         \frametitle{SIFT Descriptors}
@@ -1282,6 +1296,36 @@ I(z_1,z_2) = \left\{ \begin{array}{rl}
 \label{fig:digitalelectroencephalograph}
 \end{figure}
 \end{frame}  
+
+\begin{frame}
+\frametitle{The P300 Wave}
+\begin{center}
+Additionally, the stability of the P300 component waveform has been extensively studied in patients with ALS ~\footfullcite{SellersandEmanuelDonchin2006,TomohiroMadarame2008,Nijboer2009,Mak2012,McCane2015} where it was found that these patients have a stable P300 component, which were also sustained across different sessions.  In line with these results we do not find evidence of a difference in terms of the performance obtained by analyzing the waveforms, by using the HIST method, for the group of patients with ALS and the healthy group of volunteers (Mann-Whitney U Test, $p=0.46$). Particularly, the best performance is obtained for a subject from the ALS dataset for which, based on visual observation, the shape of they P300 component is consistently identified.
+\end{center}
+\end{frame} 
+
+\begin{frame}
+\frametitle{P300 ERP Template for Dataset III}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\includegraphics[height=7.2cm,width=12cm]{images/erptemplate1.eps}
+\label{fig:erptemplate1}
+\end{figure}
+\end{center}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Performance Curves for Dataset IV (Dataset IIb BCI Competition II 2003)}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=14cm]{images/PerformanceBCICompetition.eps}
+\label{fig:performancebcicompetition}
+\end{figure}
+\end{center}
+\end{frame} 
+
 
 \begin{frame}  
 \begin{table}[h!]
