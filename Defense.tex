@@ -246,11 +246,11 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{Waveform-Based Algorithms}
 \begin{center}
 \begin{itemize}
- \item<1-> \Fontre Peak Picking/aEEG/PAA
- \item<2-> \Fontre Merge of Increasing and Decreasing Sequences
- \item<3-> \Fontre Permutation Entropy - PE
- \item<4-> \Fontre Matching Pursuit - MP
- \item<5-> \Fontre Slope Horizontal Chain Code - SHCC
+ \item<1-> \Fontre Peak Picking/aEEG/Period Amplitude Analysis
+ \item<1-> \Fontre Merge of Increasing and Decreasing Sequences
+ \item<2-> \Fontre Permutation Entropy - PE
+ \item<3-> \Fontre Matching Pursuit - MP
+ \item<4-> \Fontre Slope Horizontal Chain Code - SHCC
 \end{itemize}
 \end{center}
 \end{frame}
@@ -670,7 +670,6 @@ Instituto Tecnológico de Buenos Aires
 \frametitle{P300-Based BCI Speller - Letter Identification}
 \begin{center}
 \vspace{-\baselineskip}
-\vspace{-\baselineskip}
 \begin{equation}
 \hat{row} = \arg \min_{l \in \{1,\dots,6\}} \sum_{h=1}^{\gls{k}}  {\left\lVert \mathbf{q}^{(l,bpc)} -  \mathbf{d}_{h}^{(bpc)} \right\rVert}  ^{2}
 \label{eq:multiclassificationrow}
@@ -686,7 +685,6 @@ Instituto Tecnológico de Buenos Aires
 \item $\mathbf{q}^{(l,bpc)} $ query descriptor of matrix index $l$.
 \item $\mathbf{d}_{h}^{(bpc)} $ neighbors descriptors from the template.
 \item $\mathbf{d}_{h}^{(bpc)} \in N_T(  \mathbf{q}^{(l,bpc)} )$.
-\item $\hat{L}$ predicted class label.
 \item $\gls{k}$ the number of neighbors to pick from the template~\footfullcite{Boiman2008}.
 \end{itemize}
 
@@ -938,15 +936,15 @@ SVM     & C1  & $32\%$ \\
 \begin{itemize}
 \item \Fontre $\alpha$ and $\mu$ waves can be identified by their waveforms.
 \item \Fontre Occipital regions more prominent P300 waveforms.
-\item \Fontre The stability of ERP transient components in ALS patients 
+\item \Fontre The stability of ERP transient components in ALS patients. 
 \begin{itemize}
 \item Mann-Whitney U Test, $p=0.46$
 \end{itemize}
-\item \Fontre Latency jitter 
+\item \Fontre Latency jitter. 
 \begin{itemize}
 \item Wilcoxon rank sum test, one tail, $p=0.0022$
 \end{itemize}
-\item \Fontre Amplitude resistance 
+\item \Fontre Component Amplitude resistance. 
 \begin{itemize}
 \item Wilcoxon rank sum test, two tails, $p=0.17$
 \end{itemize}
@@ -959,9 +957,9 @@ SVM     & C1  & $32\%$ \\
 \begin{center}
 \begin{itemize}
 \item \Fontre Method to construct analyzable image plots.
-\item \Fontre EEG Waveform Feature Extraction Procedure
-\item \Fontre SIFT extension and modification: HIST
-\item \Fontre Classification algorithm
+\item \Fontre EEG Waveform Feature Extraction Procedure.
+\item \Fontre SIFT extension and modification: HIST.
+\item \Fontre Classification algorithm.
 \end{itemize}
 \end{center}
 \end{frame}        
@@ -970,11 +968,11 @@ SVM     & C1  & $32\%$ \\
 \frametitle{Practical Contributions}
 \begin{center}
 \begin{itemize}
-\item \Fontre P300-Dataset on Kaggle
-\item \Fontre Registered as EEGWave Code Ocean Reproducible Research Online Platform
-\item \Fontre Online Application based on OpenVibe and LSL.
-\item \Fontre BCI Online Blog
-\item \Fontre Matlab toolbox for Computer Vision EEG Analysis.
+\item \Fontre P300-Dataset on Kaggle.
+\item \Fontre EEGWave - Code Ocean Reproducible Research Platform.
+\item \Fontre Online Speller Application based on OpenVibe and LSL.
+\item \Fontre BCI Online Blog.
+\item \Fontre Matlab toolbox for Computer Vision-EEG Analysis.
 \end{itemize}
 \end{center}
 \end{frame} 
